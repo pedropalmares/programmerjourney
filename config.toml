@@ -1,6 +1,7 @@
-baseURL = "/"
+baseURL = "https://pedropalmares.github.io/programmerjourney/"
 title = "My blog"
 theme = "ghostwriter"
+publishDir = "docs"
 
 [Params]
     mainSections = ["post"]
