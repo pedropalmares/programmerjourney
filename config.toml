@@ -1,7 +1,8 @@
-baseURL = "https://pedropalmares.github.io/programmerjourney/"
+baseURL = "https://www.programmerjourney.com/"
 title = "Programmer Journey"
 theme = "ghostwriter"
 publishDir = "docs"
+googleAnalytics = "UA-168158575-1"
 
 [Params]
     mainSections = ["post"]
@@ -13,5 +14,3 @@ publishDir = "docs"
 
 [Permalinks]
     post = "/:filename/"
-
-[menu]

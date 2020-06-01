@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Creating a simple blog</title>
+        <meta name="description" content="GitHub Pages &#43; Hugo">
+        <meta name="HandheldFriendly" content="True">
+        <meta name="MobileOptimized" content="320">
+        <meta name="generator" content="Hugo 0.71.0" />
+        <meta name="robots" content="index,follow">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta property="og:title" content="Creating a simple blog">
+<meta property="og:description" content="GitHub Pages &#43; Hugo">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://www.programmerjourney.com/hugo/">
+        <link rel="stylesheet" href="https://www.programmerjourney.com/dist/site.css">
+        <link rel="stylesheet" href="https://www.programmerjourney.com/dist/syntax.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,600,700,300&subset=latin,cyrillic-ext,latin-ext,cyrillic">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+        
+        <style>
+    #wrapper {
+        margin-bottom: -95px;
+    }
+
+    .footer {
+        height: 95px;
+        margin-top: 0px;
+    }
+
+    .footer .site-title-wrapper {
+        margin: 35px auto;
+    }
+</style>
+        
+        
+    </head>
+    <body>
+        
+
+        <div id="wrapper">
+            <header class="site-header">
+                <div class="container">
+                    <div class="site-title-wrapper">
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                    </div>
+
+                    <ul class="site-nav">
+                        
+                    </ul>
+                </div>
+            </header>
+
+            <div id="container">
+
+
+<div class="container">
+    <article class="post-container" itemscope="" itemtype="http://schema.org/BlogPosting">
+        <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Creating a simple blog</h1>
+    
+        <p class="post-description" itemprop="description">GitHub Pages &#43; Hugo</p>
+    
+    <p class="post-date post-line">
+        <span>Published <time datetime="2014-09-28" itemprop="datePublished">Sun, Sep 28, 2014</time></span>
+        <span>by</span>
+        <span itemscope="" itemprop="author" itemtype="https://schema.org/Person">
+            <span itemprop="name">
+                <a href="#" itemprop="url" rel="author"></a>
+            </span>
+        </span>
+    </p>
+    
+</header>
+
+        <div class="post-content clearfix" itemprop="articleBody">
+    
+
+    <h2 id="heading"></h2>
+<h2 id="install-hugo">Install Hugo</h2>
+<ul>
+<li>Read official documentation to install Hugo according to your operation system: <a href="https://gohugo.io/getting-started/installing">Installing Hugo</a></li>
+<li>Run <code>hugo new site MyBlog</code></li>
+</ul>
+<pre><code>C:\Blog&gt;hugo new site MyBlog
+Congratulations! Your new Hugo site is created in C:\Blog\MyBlog.
+
+Just a few more steps and you're ready to go:
+
+1. Download a theme into the same-named folder.
+   Choose a theme from https://themes.gohugo.io/ or
+   create your own with the &quot;hugo new theme &lt;THEMENAME&gt;&quot; command.
+2. Perhaps you want to add some content. You can add single files
+   with &quot;hugo new &lt;SECTIONNAME&gt;\&lt;FILENAME&gt;.&lt;FORMAT&gt;&quot;.
+3. Start the built-in live server via &quot;hugo server&quot;.
+</code></pre><ul>
+<li>This is will create the site in a new folder <code>MyBlog</code></li>
+</ul>
+<h2 id="choosing-a-theme">Choosing a theme</h2>
+<ul>
+<li>Several options here: <a href="https://themes.gohugo.io/">Hugo Themes</a></li>
+<li>I&rsquo;ve chosen <a href="https://themes.gohugo.io/ghostwriter/">ghostwriter</a></li>
+<li>Download it <a href="https://github.com/jbub/ghostwriter/archive/master.zip">here</a>
+<ul>
+<li>You could <code>git clone</code> it but this allows you to tweak it later and it&rsquo;s easier to have everything together</li>
+</ul>
+</li>
+<li>Unpackage it in <code>themes\ghostwriter</code> inside your <code>MyBlog</code> folder
+<ul>
+<li>Need to rename <code>ghostwriter-master</code> folder</li>
+</ul>
+</li>
+<li>Copy <code>themes\ghostwriter\exampleSite\content\page</code> to <code>content\page</code></li>
+<li>Copy <code>themes\ghostwriter\exampleSite\content\post</code> to <code>content\post</code></li>
+</ul>
+<h2 id="configuration">Configuration</h2>
+<ul>
+<li>Edit <code>config.toml</code> in your <code>MyBlog</code> folder
+<ul>
+<li>The baseURL is already set for GitHub Pages.
+<ul>
+<li>If don&rsquo;t know what you will be using for hosting you can leave this parameter as <code>&quot;/&quot;</code>.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<pre><code>baseURL = &quot;https://&lt;username&gt;.github.io/&lt;repository&gt;/&quot;
+title = &quot;My blog&quot;
+theme = &quot;ghostwriter&quot;
+publishDir = &quot;docs&quot;
+
+[Params]
+    mainSections = [&quot;post&quot;]
+    intro = true
+    headline = &quot;My blog&quot;
+    description = &quot;My blog's description&quot;
+    opengraph = true
+    dateFormat = &quot;Mon, Jan 2, 2006&quot;
+
+[Permalinks]
+    post = &quot;/:filename/&quot;
+</code></pre><ul>
+<li>This is a minimal configuration file</li>
+<li>Documentation <a href="https://github.com/jbub/ghostwriter">here</a></li>
+</ul>
+<h2 id="serve-your-blog-locally">Serve your blog locally</h2>
+<ul>
+<li>Run <code>hugo serve</code></li>
+</ul>
+<pre><code>C:\Blog\MyBlog&gt;hugo serve
+Building sites …
+                   | EN
+-------------------+-----
+  Pages            | 33
+  Paginator pages  |  0
+  Non-page files   |  0
+  Static files     |  8
+  Processed images |  0
+  Aliases          | 13
+  Sitemaps         |  1
+  Cleaned          |  0
+
+Built in 139 ms
+Watching for changes in C:\Blog\MyBlog\{archetypes,content,data,layouts,static,themes}
+Watching for config changes in C:\Blog\MyBlog\config.toml
+Environment: &quot;development&quot;
+Serving pages from memory
+Running in Fast Render Mode. For full rebuilds on change: hugo server --disableFastRender
+Web Server is available at //localhost:1313/myblog (bind address 127.0.0.1)
+Press Ctrl+C to stop
+</code></pre><ul>
+<li>Open <a href="http://localhost:1313/myblog">http://localhost:1313/</a> and you should see your site.</li>
+</ul>
+<figure>
+    <img src="/img/blog.png"/> 
+</figure>
+
+<ul>
+<li>Play a bit with it! You can customize it later.</li>
+<li>The posts shown are coming from the files that were copied to <code>content\post</code> so you can delete them now.</li>
+<li>Create a new post: Add a new <code>.md</code> file
+<ul>
+<li>For the filename you can use a specific name, incremental number or a date.</li>
+</ul>
+</li>
+<li>Run <code>hugo</code> to rebuild your site</li>
+</ul>
+<h2 id="customize-the-layout">Customize the layout</h2>
+<ul>
+<li>Don&rsquo;t customize it now! Content is more important than coloring.</li>
+<li>Tweak colors: add a <code>&lt;style&gt;</code> tag with CSS in <code>themes/ghostwriter/layouts/partials/header.html</code>.
+themes/ghostwriter/layouts/partials/header.html</li>
+<li>The &ldquo;post&rdquo; template is defined in <code>themes\ghostwriter\layouts\post\single.html</code></li>
+<li>More detail on <a href="https://gohugo.io/templates/">Templates documentation</a>.</li>
+</ul>
+<h2 id="hosting">Hosting</h2>
+<ul>
+<li>I will be using GitHub Pages as a Project Page
+<ul>
+<li>Official documentation on <a href="https://gohugo.io/hosting-and-deployment/hosting-on-github/">Hosting Hugo on GitHub</a></li>
+<li>Other hosting options <a href="https://gohugo.io/hosting-and-deployment/">here</a></li>
+</ul>
+</li>
+<li>Open GitHub webiste and create a new repository</li>
+<li>Create a repository for your files and push them to the repository</li>
+</ul>
+<pre><code>C:\Blog\MyBlog&gt;git init
+Initialized empty Git repository in C:/blog/MyBlog/.git/
+
+C:\Blog\MyBlog&gt;git add .
+
+C:\Blog\MyBlog&gt;git commit -m &quot;first commit&quot;
+[master (root-commit) c8c5821] first commit
+ 116 files changed, 16246 insertions(+)
+
+... [Removed lines for easy reading]
+
+C:\Blog\MyBlog&gt;git remote add origin https://github.com/&lt;username&gt;/&lt;repository&gt;.git
+
+C:\Blog\MyBlog&gt;git push -u origin master
+Enumerating objects: 172, done.
+Counting objects: 100% (172/172), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (132/132), done.
+Writing objects: 100% (172/172), 450.33 KiB | 11.26 MiB/s, done.
+Total 172 (delta 47), reused 0 (delta 0)
+remote: Resolving deltas: 100% (47/47), done.
+To https://github.com/&lt;username&gt;/&lt;repository&gt;.git
+ * [new branch]      master -&gt; master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+</code></pre><ul>
+<li>On GitHub Settings page → GitHub Pages
+<ul>
+<li>Source: <code>master branch /docs folder</code></li>
+<li>Custom domain: <code>www.example.com</code>
+<ul>
+<li>I use <a href="https://www.namecheap.com/">Namecheap</a> to buy new domains</li>
+</ul>
+</li>
+<li>Run <code>git pull</code></li>
+</ul>
+</li>
+<li>On your Namecheap Domain List → Manage → Advanced DNS
+<ul>
+<li>Remove all host records</li>
+<li>Add <code>A Record</code> for host <code>@</code> with value <code>185.199.108.153</code></li>
+<li>Add <code>A Record</code> for host <code>@</code> with value <code>185.199.109.153</code></li>
+<li>Add <code>A Record</code> for host <code>@</code> with value <code>185.199.110.153</code></li>
+<li>Add <code>A Record</code> for host <code>@</code> with value <code>185.199.111.153</code></li>
+</ul>
+</li>
+<li>On GitHub Settings page <code>Enforce HTTPS</code>.
+<ul>
+<li>May take 24 hours to be enabled.</li>
+</ul>
+</li>
+</ul>
+<h3 id="your-site-should-be-ready">Your site should be ready!</h3>
+<h2 id="see-also">See also</h2>
+<ul>
+<li>Google Analytics</li>
+<li>Disqus</li>
+</ul>
+
+</div>
+
+        <footer class="post-footer clearfix">
+    
+
+    <div class="share">
+        
+            <a class="icon-twitter" href="https://twitter.com/share?text=Creating%20a%20simple%20blog&url=https%3a%2f%2fwww.programmerjourney.com%2fhugo%2f"
+                onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                <i class="fa fa-twitter"></i>
+                <span class="hidden">Twitter</span>
+            </a>
+        
+
+        
+            <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.programmerjourney.com%2fhugo%2f"
+                onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                <i class="fa fa-facebook"></i>
+                <span class="hidden">Facebook</span>
+            </a>
+        
+
+        
+            <a class="icon-google-plus" href="https://plus.google.com/share?url=https%3a%2f%2fwww.programmerjourney.com%2fhugo%2f"
+              onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+              <i class="fa fa-google-plus"></i>
+                <span class="hidden">Google+</span>
+            </a>
+        
+        
+    </div>
+</footer>
+
+        
+    </article>
+</div>
+
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="site-title-wrapper">
+                    <p class="footer-copyright">
+                        <span>&copy; 2020 Programmer Journey</span>
+                    </p>
+                </div>
+            </div>
+        </footer>
+
+        <script src="https://www.programmerjourney.com/js/jquery-1.11.3.min.js"></script>
+        <script src="https://www.programmerjourney.com/js/jquery.fitvids.js"></script>
+        <script src="https://www.programmerjourney.com/js/scripts.js"></script>
+    </body>
+</html>
+
