@@ -4,6 +4,10 @@ theme = "ghostwriter"
 publishDir = "docs"
 googleAnalytics = "UA-168158575-1"
 
+# Enable for syntax highlighting
+pygmentsUseClasses = true
+pygmentsCodeFences = true
+
 [Params]
     mainSections = ["post"]
     intro = true
