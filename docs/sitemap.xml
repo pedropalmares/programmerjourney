@@ -3,15 +3,53 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://www.programmerjourney.com/page/about/</loc>
+    <lastmod>2020-06-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.programmerjourney.com/tags/blog/</loc>
+    <lastmod>2020-06-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.programmerjourney.com/categories/blog/</loc>
+    <lastmod>2020-06-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://www.programmerjourney.com/categories/</loc>
+    <lastmod>2020-06-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.programmerjourney.com/hugo/</loc>
+    <lastmod>2020-06-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.programmerjourney.com/tags/hugo/</loc>
+    <lastmod>2020-06-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.programmerjourney.com/page/</loc>
+    <lastmod>2020-06-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.programmerjourney.com/post/</loc>
+    <lastmod>2020-06-06T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://www.programmerjourney.com/</loc>
+    <lastmod>2020-06-06T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://www.programmerjourney.com/tags/</loc>
+    <lastmod>2020-06-06T00:00:00+00:00</lastmod>
   </url>
   
 </urlset>

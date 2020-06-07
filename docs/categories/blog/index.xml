@@ -1,25 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Programmer Journey</title>
-    <link>https://www.programmerjourney.com/</link>
-    <description>Recent content on Programmer Journey</description>
+    <title>Blog on Programmer Journey</title>
+    <link>https://www.programmerjourney.com/categories/blog/</link>
+    <description>Recent content in Blog on Programmer Journey</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Sat, 06 Jun 2020 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://www.programmerjourney.com/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.programmerjourney.com/categories/blog/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>About</title>
-      <link>https://www.programmerjourney.com/page/about/</link>
-      <pubDate>Sat, 06 Jun 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.programmerjourney.com/page/about/</guid>
-      <description>Hi, I&amp;rsquo;m Pedro and I&amp;rsquo;m based in Portugal.
-I&amp;rsquo;m an experienced software developer &amp;amp; team leader and in this blog I&amp;rsquo;ll be writing my notes on everything I learn in my journey as programmer. I hope that they are also helpful for you.
-If you want to get in contact with me or if there is a specific subject that you want me to write about please send me an e-mail to pedro@programmerjourney.</description>
-    </item>
     
     <item>
       <title>Creating a simple free blog</title>
