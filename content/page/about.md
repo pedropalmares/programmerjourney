@@ -1,12 +1,12 @@
 +++
 title = "About"
-date = 2020-06-06T00:00:00Z
 author = "Pedro"
+date = 2020-06-06T00:00:00Z
 menu = "main"
 draft = false
 +++
 
-Hi, I'm Pedro and I'm based in Portugal.
+Hi, I'm Pedro and I'm based in Portugal where I work remotely from my home office.
 
 I'm an experienced software developer & team leader and in this blog I'll be writing my notes on everything I learn in my journey as programmer.
 I hope that they are also helpful for you.
