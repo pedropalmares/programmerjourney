@@ -3,6 +3,7 @@ title = "Programmer Journey"
 theme = "ghostwriter"
 publishDir = "docs"
 googleAnalytics = "UA-168158575-1"
+disqusShortname = "programmerjourney"
 
 # Enable for syntax highlighting
 pygmentsUseClasses = true
