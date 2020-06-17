@@ -5,7 +5,7 @@
     <link>https://www.programmerjourney.com/tags/asp.net-core-3.0/</link>
     <description>Recent content in ASP.NET Core 3.0 on Programmer Journey</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 11 Jun 2020 15:28:21 +0100</lastBuildDate>
+    <lastBuildDate>Wed, 17 Jun 2020 10:18:21 +0100</lastBuildDate>
     
 	<atom:link href="https://www.programmerjourney.com/tags/asp.net-core-3.0/index.xml" rel="self" type="application/rss+xml" />
     
@@ -13,7 +13,7 @@
     <item>
       <title>Editing Razor views when debugging</title>
       <link>https://www.programmerjourney.com/razor-views-debug-edit/</link>
-      <pubDate>Thu, 11 Jun 2020 15:28:21 +0100</pubDate>
+      <pubDate>Wed, 17 Jun 2020 10:18:21 +0100</pubDate>
       
       <guid>https://www.programmerjourney.com/razor-views-debug-edit/</guid>
       <description>If you have been programming with Razor Pages on ASP.NET Core 3.0 you know that restarting your application every time you make a change is not very productive.
