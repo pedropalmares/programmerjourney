@@ -5,10 +5,22 @@
     <link>https://www.programmerjourney.com/post/</link>
     <description>Recent content in Posts on Programmer Journey</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 08 Jun 2020 22:53:43 +0100</lastBuildDate>
+    <lastBuildDate>Thu, 11 Jun 2020 15:28:21 +0100</lastBuildDate>
     
 	<atom:link href="https://www.programmerjourney.com/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Editing Razor views when debugging</title>
+      <link>https://www.programmerjourney.com/razor-views-debug-edit/</link>
+      <pubDate>Thu, 11 Jun 2020 15:28:21 +0100</pubDate>
+      
+      <guid>https://www.programmerjourney.com/razor-views-debug-edit/</guid>
+      <description>If you have been programming with Razor Pages on ASP.NET Core 3.0 you know that restarting your application every time you make a change is not very productive.
+By default, your changes are not refreshed automatically and you need to restart your application. Let me show you how to change this behavior.
+Add required Nuget package You need to add the Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation Nuget to your project.
+Edit project file This Nuget should be only referenced when you are running your application in Debug mode.</description>
+    </item>
     
     <item>
       <title>Starting a programmer&#39;s blog</title>

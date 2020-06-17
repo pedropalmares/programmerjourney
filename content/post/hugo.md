@@ -15,7 +15,7 @@ In this post, I'll guide you in how to create a simple blog site using Hugo as a
 The instructions to install Hugo are different for each operation system so please read the [official documentation](https://gohugo.io/getting-started/installing).
 
 After installation is complete run `hugo new site MyBlog`:
-```
+```batchfile
 C:\Blog>hugo new site MyBlog
 Congratulations! Your new Hugo site is created in C:\Blog\MyBlog.
 
@@ -93,7 +93,7 @@ Press Ctrl+C to stop
 ```
 * Open [http://localhost:1313/](http://localhost:1313/myblog) and you should see your site.
 
-{{< figure src="/img/blog.png" >}}
+![Blog](/img/blog.png)
 
 * You can explore your new blog now!
 * The posts that you see are coming from the files that were copied to `content\post` so you can delete them now.

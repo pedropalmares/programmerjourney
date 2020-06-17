@@ -3,17 +3,17 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Starting a programmer&#39;s blog</title>
-        <meta name="description" content="Why I&#39;m finally starting my programmer&#39;s blog">
+        <title>Editing Razor views when debugging</title>
+        <meta name="description" content="How to update Razor views without restarting">
         <meta name="HandheldFriendly" content="True">
         <meta name="MobileOptimized" content="320">
         <meta name="generator" content="Hugo 0.71.0" />
         <meta name="robots" content="index,follow">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta property="og:title" content="Starting a programmer&#39;s blog">
-<meta property="og:description" content="Why I&#39;m finally starting my programmer&#39;s blog">
+        <meta property="og:title" content="Editing Razor views when debugging">
+<meta property="og:description" content="How to update Razor views without restarting">
 <meta property="og:type" content="article">
-<meta property="og:url" content="https://www.programmerjourney.com/starting-a-programmers-blog/">
+<meta property="og:url" content="https://www.programmerjourney.com/razor-views-debug-edit/">
         <link rel="stylesheet" href="https://www.programmerjourney.com/dist/site.css">
         <link rel="stylesheet" href="https://www.programmerjourney.com/dist/syntax.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,600,700,300&subset=latin,cyrillic-ext,latin-ext,cyrillic">
@@ -98,12 +98,12 @@ if (!doNotTrack) {
 <div class="container">
     <article class="post-container" itemscope="" itemtype="http://schema.org/BlogPosting">
         <header class="post-header">
-    <h1 class="post-title" itemprop="name headline">Starting a programmer&#39;s blog</h1>
+    <h1 class="post-title" itemprop="name headline">Editing Razor views when debugging</h1>
     
-        <p class="post-description" itemprop="description">Why I&#39;m finally starting my programmer&#39;s blog</p>
+        <p class="post-description" itemprop="description">How to update Razor views without restarting</p>
     
     <p class="post-date post-line">
-        <span><time datetime="2020-06-08" itemprop="datePublished">Mon, Jun 8, 2020</time></span>
+        <span><time datetime="2020-06-11" itemprop="datePublished">Thu, Jun 11, 2020</time></span>
         <span>by</span>
         <span itemscope="" itemprop="author" itemtype="https://schema.org/Person">
             <span itemprop="name">
@@ -117,29 +117,43 @@ if (!doNotTrack) {
         <div class="post-content clearfix" itemprop="articleBody">
     
 
-    <p>I&rsquo;ve been thinking about starting my programmer&rsquo;s blog for 3 years now and I finally decided to go for it.</p>
-<p>Here are the reasons why I have started it and why you should do it too!</p>
-<h1 id="do-programmers-need-a-blog-yes">Do programmers need a blog? Yes!</h1>
-<p>A programming blog is a portfolio for programmers.</p>
-<p>If you were a designer, an artist or a model you would have for sure a portfolio where you could show your work to the world, your accomplishments, what you are really capable of doing.</p>
-<p>So, how can you do it as a programmer? If you are a front-end developer you could have a portfolio but having a blog would be much more complete. If you are a back-end developer or a DBA then the best way to show your work is by writing a blog and sharing your knowledge to the world.</p>
-<h1 id="im-afraid-of-what-others-will-think-about-me-what-if-i-write-something-wrong">I&rsquo;m afraid of what others will think about me. What if I write something wrong?</h1>
-<p>No one is perfect and in this industry we will learn new stuff everyday.</p>
-<p>Imagine that you write something down and there is a better way to do it but you didn&rsquo;t knew. If you are lucky enough, someone will reach out and let you know that. This is a great way for you to learn. And if you don&rsquo;t agree with a comment, it&rsquo;s a nice way to start an healthy and respectful discussion.</p>
-<p>Technologies are evolving very very fast, it&rsquo;s very difficult to keep pace with them so I think that you&rsquo;ll be ok as long as you don&rsquo;t write something that you don&rsquo;t believe in and you accept to be corrected by someone else.</p>
-<p>I had this concern several times and I finally accepted that it is totally fine to not know everything.</p>
-<h1 id="what-did-i-learned-during-the-last-year">What did I learned during the last year?</h1>
-<p>To be honest, I&rsquo;m not sure&hellip; But I should!</p>
-<p>I mean, I know that I learned <a href="https://reactjs.org/">React</a> last year when I had to start a project from scratch with my old team but what did I specifically learned about it? Where are my notes from my learning? If I had them and I had to use React now, it would be much easier to remember it again and to understand what has changed since then.</p>
-<p>It has been scientifically proved that the best way to learn something is by doing it and by teaching it. Although my goal here is not to be a 1-on-1 teacher, writing a blog post forces me to do some preparation, to think carefully about the content and to make sure that it&rsquo;s clear to everyone. So, I&rsquo;ll be learning better and at the same time I may be helping you.</p>
-<h1 id="you-were-stuck-and-figured-something-out-post-about-it">You were stuck and figured something out? Post about it!</h1>
-<p>How many times does a programmer face a problem, finds the solution and forgets about it a few weeks later? This happened to me too many times.</p>
-<blockquote>
-<p>Try to write down everything new that you learn!</p>
-</blockquote>
-<p>Once I was asked to improve a MVP website that used <a href="https://knockoutjs.com/">Knockout.JS</a> in some parts. I knew what it was but I had never played with it before. When I had to fix a bug in this project, I had to learn the basics, how it worked, which features were being used and after some time I managed to fix the bug. 3 months later when I was asked to create a new feature using this JS Framework I realized that I had to learn everything again because I didn&rsquo;t remember most of what I&rsquo;ve learned before. At that time, I thought to myself: <em>There must be a better way</em>.</p>
-<p>If my notes can be useful for me, why can&rsquo;t they be useful for you too? You may be facing a similar problem and my notes may be able to help you.</p>
-<p>Don&rsquo;t be afraid - just write down</p>
+    <p>If you have been programming with Razor Pages on ASP.NET Core 3.0 you know that restarting your application every time you make a change is not very productive.</p>
+<p>By default, your changes are not refreshed automatically and you need to  restart your application. Let me show you how to change this behavior.</p>
+<h1 id="add-required-nuget-package">Add required Nuget package</h1>
+<p>You need to add the <a href="https://www.nuget.org/packages/Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation/">Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation</a> Nuget to your project.</p>
+<p><img src="/img/razor-views-debug-edit-1.png" alt="Add Nuget"></p>
+<h1 id="edit-project-file">Edit project file</h1>
+<p>This Nuget should be only referenced when you are running your application in Debug mode.</p>
+<p>You need to edit the project file:</p>
+<p><img src="/img/razor-views-debug-edit-2.png" alt="Edit Project File Menu"></p>
+<p>Add the condition <code>Condition=&quot;'$(Configuration)' == 'Debug'&quot;</code> based on the active <code>Configuration</code> value:</p>
+<p><img src="/img/razor-views-debug-edit-3.png" alt="Edit Project File"></p>
+<h1 id="update-startupconfigureservices">Update Startup.ConfigureServices</h1>
+<p>The final step is to include a call to <code>AddRazorRuntimeCompilation</code>.</p>
+<div class="highlight"><pre class="chroma"><code class="language-cs" data-lang="cs"><span class="k">public</span> <span class="k">class</span> <span class="nc">Startup</span>
+<span class="p">{</span>
+    <span class="k">public</span> <span class="n">Startup</span><span class="p">(</span><span class="n">IConfiguration</span> <span class="n">configuration</span><span class="p">,</span> <span class="n">IWebHostEnvironment</span> <span class="n">env</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">Configuration</span> <span class="p">=</span> <span class="n">configuration</span><span class="p">;</span>
+        <span class="n">Env</span> <span class="p">=</span> <span class="n">env</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="k">public</span> <span class="n">IWebHostEnvironment</span> <span class="n">Env</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+    <span class="k">public</span> <span class="n">IConfiguration</span> <span class="n">Configuration</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="p">}</span>
+
+    <span class="c1">// This method gets called by the runtime. Use this method to add services to the container.
+</span><span class="c1"></span>    <span class="k">public</span> <span class="k">void</span> <span class="n">ConfigureServices</span><span class="p">(</span><span class="n">IServiceCollection</span> <span class="n">services</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">IMvcBuilder</span> <span class="n">builder</span> <span class="p">=</span> <span class="n">services</span><span class="p">.</span><span class="n">AddRazorPages</span><span class="p">();</span>
+
+<span class="cp">#if DEBUG
+</span><span class="cp"></span>        <span class="k">if</span> <span class="p">(</span><span class="n">Env</span><span class="p">.</span><span class="n">IsDevelopment</span><span class="p">())</span>
+        <span class="p">{</span>
+            <span class="n">builder</span><span class="p">.</span><span class="n">AddRazorRuntimeCompilation</span><span class="p">();</span>
+        <span class="p">}</span>
+<span class="cp">#endif
+</span><span class="cp"></span>    <span class="p">}</span>
+</code></pre></div><p>Read the <a href="https://docs.microsoft.com/en-us/aspnet/core/mvc/views/view-compilation?view=aspnetcore-3.0&amp;tabs=visual-studio">official documentation</a> for more details or for other versions.</p>
 
 </div>
 
@@ -149,14 +163,14 @@ if (!doNotTrack) {
             <span>Tagged:</span>
             
             
-                <a href="/tags/blog/">Blog</a>
+                <a href="/tags/asp.net-core-3.0/">ASP.NET Core 3.0</a>
             
         </p>
     
 
     <div class="share">
         
-            <a class="icon-twitter" href="https://twitter.com/share?text=Starting%20a%20programmer%27s%20blog&url=https%3a%2f%2fwww.programmerjourney.com%2fstarting-a-programmers-blog%2f"
+            <a class="icon-twitter" href="https://twitter.com/share?text=Editing%20Razor%20views%20when%20debugging&url=https%3a%2f%2fwww.programmerjourney.com%2frazor-views-debug-edit%2f"
                 onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
                 <i class="fa fa-twitter"></i>
                 <span class="hidden">Twitter</span>
@@ -164,7 +178,7 @@ if (!doNotTrack) {
         
 
         
-            <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.programmerjourney.com%2fstarting-a-programmers-blog%2f"
+            <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.programmerjourney.com%2frazor-views-debug-edit%2f"
                 onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
                 <i class="fa fa-facebook"></i>
                 <span class="hidden">Facebook</span>
@@ -172,7 +186,7 @@ if (!doNotTrack) {
         
 
         
-            <a class="icon-google-plus" href="https://plus.google.com/share?url=https%3a%2f%2fwww.programmerjourney.com%2fstarting-a-programmers-blog%2f"
+            <a class="icon-google-plus" href="https://plus.google.com/share?url=https%3a%2f%2fwww.programmerjourney.com%2frazor-views-debug-edit%2f"
               onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
               <i class="fa fa-google-plus"></i>
                 <span class="hidden">Google+</span>

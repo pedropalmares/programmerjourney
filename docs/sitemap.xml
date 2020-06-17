@@ -3,6 +3,41 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://www.programmerjourney.com/tags/asp.net-core-3.0/</loc>
+    <lastmod>2020-06-11T15:28:21+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.programmerjourney.com/categories/</loc>
+    <lastmod>2020-06-11T15:28:21+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.programmerjourney.com/razor-views-debug-edit/</loc>
+    <lastmod>2020-06-11T15:28:21+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.programmerjourney.com/post/</loc>
+    <lastmod>2020-06-11T15:28:21+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.programmerjourney.com/</loc>
+    <lastmod>2020-06-11T15:28:21+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.programmerjourney.com/categories/razor/</loc>
+    <lastmod>2020-06-11T15:28:21+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.programmerjourney.com/tags/</loc>
+    <lastmod>2020-06-11T15:28:21+01:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://www.programmerjourney.com/tags/blog/</loc>
     <lastmod>2020-06-08T22:53:43+01:00</lastmod>
   </url>
@@ -13,27 +48,7 @@
   </url>
   
   <url>
-    <loc>https://www.programmerjourney.com/categories/</loc>
-    <lastmod>2020-06-08T22:53:43+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.programmerjourney.com/post/</loc>
-    <lastmod>2020-06-08T22:53:43+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.programmerjourney.com/</loc>
-    <lastmod>2020-06-08T22:53:43+01:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://www.programmerjourney.com/starting-a-programmers-blog/</loc>
-    <lastmod>2020-06-08T22:53:43+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.programmerjourney.com/tags/</loc>
     <lastmod>2020-06-08T22:53:43+01:00</lastmod>
   </url>
   

@@ -78,6 +78,10 @@ if (!doNotTrack) {
         <a title="Blog" href="https://www.programmerjourney.com/categories/blog/">Blog</a>
     </li>
 
+    <li class="site-nav-item">
+        <a title="Razor" href="https://www.programmerjourney.com/categories/razor/">Razor</a>
+    </li>
+
 
 
     <li class="site-nav-item">
@@ -117,18 +121,18 @@ if (!doNotTrack) {
 <h1 id="install-hugo">Install Hugo</h1>
 <p>The instructions to install Hugo are different for each operation system so please read the <a href="https://gohugo.io/getting-started/installing">official documentation</a>.</p>
 <p>After installation is complete run <code>hugo new site MyBlog</code>:</p>
-<pre><code>C:\Blog&gt;hugo new site MyBlog
+<div class="highlight"><pre class="chroma"><code class="language-batchfile" data-lang="batchfile">C<span class="p">:</span><span class="nl">\Blog</span><span class="c1">&gt;hugo new site MyBlog</span>
 Congratulations! Your new Hugo site is created in C:\Blog\MyBlog.
 
-Just a few more steps and you're ready to go:
+Just a few more steps and you&#39;re ready to go:
 
 1. Download a theme into the same-named folder.
    Choose a theme from https://themes.gohugo.io/ or
-   create your own with the &quot;hugo new theme &lt;THEMENAME&gt;&quot; command.
+   create your own with the <span class="s2">&#34;hugo new theme &lt;THEMENAME&gt;&#34;</span> command.
 2. Perhaps you want to add some content. You can add single files
-   with &quot;hugo new &lt;SECTIONNAME&gt;\&lt;FILENAME&gt;.&lt;FORMAT&gt;&quot;.
-3. Start the built-in live server via &quot;hugo server&quot;.
-</code></pre><p>This will create the site in a new folder named <code>MyBlog</code>.</p>
+   with <span class="s2">&#34;hugo new &lt;SECTIONNAME&gt;\&lt;FILENAME&gt;.&lt;FORMAT&gt;&#34;</span>.
+3. Start the built-in live server via <span class="s2">&#34;hugo server&#34;</span>.
+</code></pre></div><p>This will create the site in a new folder named <code>MyBlog</code>.</p>
 <h1 id="choosing-a-theme">Choosing a theme</h1>
 <p>There are several options in <a href="https://themes.gohugo.io/">Hugo Themes</a>.</p>
 <p>For my blog I&rsquo;ve chosen <a href="https://themes.gohugo.io/ghostwriter/">Ghostwriter</a>. You can download it <a href="https://github.com/jbub/ghostwriter/archive/master.zip">here</a>. You could <code>git clone</code> it but by downloading it you can tweak it later and I think that it&rsquo;s easier to have all your blog source files together. After download:</p>
@@ -193,10 +197,7 @@ Press Ctrl+C to stop
 </code></pre></div><ul>
 <li>Open <a href="http://localhost:1313/myblog">http://localhost:1313/</a> and you should see your site.</li>
 </ul>
-<figure>
-    <img src="/img/blog.png"/> 
-</figure>
-
+<p><img src="/img/blog.png" alt="Blog"></p>
 <ul>
 <li>You can explore your new blog now!</li>
 <li>The posts that you see are coming from the files that were copied to <code>content\post</code> so you can delete them now.</li>
