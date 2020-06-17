@@ -5,10 +5,23 @@
     <link>https://www.programmerjourney.com/tags/hugo/</link>
     <description>Recent content in Hugo on Programmer Journey</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sat, 06 Jun 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 17 Jun 2020 11:29:02 +0100</lastBuildDate>
     
 	<atom:link href="https://www.programmerjourney.com/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Adding comments to a Hugo blog with Disqus</title>
+      <link>https://www.programmerjourney.com/hugo-add-disqus/</link>
+      <pubDate>Wed, 17 Jun 2020 11:29:02 +0100</pubDate>
+      
+      <guid>https://www.programmerjourney.com/hugo-add-disqus/</guid>
+      <description>In this post I&amp;rsquo;ll show you how to add comments to a Hugo blog with Disqus.
+Signup to Disqus The first step is to create an account on Disqus and add your site to the account. The basic plan is free to use.
+Add Disqus Short Name Then we need to add the Disqus Short Name to your blog config.toml
+disqusShortname = &amp;#34;yourshortname&amp;#34; Done! It&amp;rsquo;s very easy!
+For more details read the official documentation.</description>
+    </item>
     
     <item>
       <title>Creating a simple free blog</title>
