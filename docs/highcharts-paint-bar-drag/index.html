@@ -3,17 +3,17 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Editing Razor views when debugging</title>
-        <meta name="description" content="How to update Razor views without restarting">
+        <title>Highcharts Draggable Bar color validation</title>
+        <meta name="description" content="Validating user input">
         <meta name="HandheldFriendly" content="True">
         <meta name="MobileOptimized" content="320">
         <meta name="generator" content="Hugo 0.71.0" />
         <meta name="robots" content="index,follow">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta property="og:title" content="Editing Razor views when debugging">
-<meta property="og:description" content="How to update Razor views without restarting">
+        <meta property="og:title" content="Highcharts Draggable Bar color validation">
+<meta property="og:description" content="Validating user input">
 <meta property="og:type" content="article">
-<meta property="og:url" content="https://www.programmerjourney.com/razor-views-debug-edit/">
+<meta property="og:url" content="https://www.programmerjourney.com/highcharts-paint-bar-drag/">
         <link rel="stylesheet" href="https://www.programmerjourney.com/dist/site.css">
         <link rel="stylesheet" href="https://www.programmerjourney.com/dist/syntax.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,600,700,300&subset=latin,cyrillic-ext,latin-ext,cyrillic">
@@ -102,12 +102,12 @@ if (!doNotTrack) {
 <div class="container">
     <article class="post-container" itemscope="" itemtype="http://schema.org/BlogPosting">
         <header class="post-header">
-    <h1 class="post-title" itemprop="name headline">Editing Razor views when debugging</h1>
+    <h1 class="post-title" itemprop="name headline">Highcharts Draggable Bar color validation</h1>
     
-        <p class="post-description" itemprop="description">How to update Razor views without restarting</p>
+        <p class="post-description" itemprop="description">Validating user input</p>
     
     <p class="post-date post-line">
-        <span><time datetime="2020-06-17" itemprop="datePublished">Wed, Jun 17, 2020</time></span>
+        <span><time datetime="2020-07-01" itemprop="datePublished">Wed, Jul 1, 2020</time></span>
         <span>by</span>
         <span itemscope="" itemprop="author" itemtype="https://schema.org/Person">
             <span itemprop="name">
@@ -121,43 +121,47 @@ if (!doNotTrack) {
         <div class="post-content clearfix" itemprop="articleBody">
     
 
-    <p>If you have been programming with Razor Pages on ASP.NET Core 3.0 you know that restarting your application every time you make a change is not very productive.</p>
-<p>By default, your changes are not refreshed automatically and you need to  restart your application. Let me show you how to change this behavior.</p>
-<h1 id="add-required-nuget-package">Add required Nuget package</h1>
-<p>You need to add the <a href="https://www.nuget.org/packages/Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation/">Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation</a> Nuget to your project.</p>
-<p><img src="/img/razor-views-debug-edit-1.png" alt="Add Nuget"></p>
-<h1 id="edit-project-file">Edit project file</h1>
-<p>This Nuget should be only referenced when you are running your application in Debug mode.</p>
-<p>You need to edit the project file:</p>
-<p><img src="/img/razor-views-debug-edit-2.png" alt="Edit Project File Menu"></p>
-<p>Add the condition <code>Condition=&quot;'$(Configuration)' == 'Debug'&quot;</code> based on the active <code>Configuration</code> value:</p>
-<p><img src="/img/razor-views-debug-edit-3.png" alt="Edit Project File"></p>
-<h1 id="update-startupconfigureservices">Update Startup.ConfigureServices</h1>
-<p>The final step is to include a call to <code>AddRazorRuntimeCompilation</code>.</p>
-<div class="highlight"><pre class="chroma"><code class="language-cs" data-lang="cs"><span class="k">public</span> <span class="k">class</span> <span class="nc">Startup</span>
-<span class="p">{</span>
-    <span class="k">public</span> <span class="n">Startup</span><span class="p">(</span><span class="n">IConfiguration</span> <span class="n">configuration</span><span class="p">,</span> <span class="n">IWebHostEnvironment</span> <span class="n">env</span><span class="p">)</span>
-    <span class="p">{</span>
-        <span class="n">Configuration</span> <span class="p">=</span> <span class="n">configuration</span><span class="p">;</span>
-        <span class="n">Env</span> <span class="p">=</span> <span class="n">env</span><span class="p">;</span>
-    <span class="p">}</span>
-
-    <span class="k">public</span> <span class="n">IWebHostEnvironment</span> <span class="n">Env</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
-    <span class="k">public</span> <span class="n">IConfiguration</span> <span class="n">Configuration</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="p">}</span>
-
-    <span class="c1">// This method gets called by the runtime. Use this method to add services to the container.
-</span><span class="c1"></span>    <span class="k">public</span> <span class="k">void</span> <span class="n">ConfigureServices</span><span class="p">(</span><span class="n">IServiceCollection</span> <span class="n">services</span><span class="p">)</span>
-    <span class="p">{</span>
-        <span class="n">IMvcBuilder</span> <span class="n">builder</span> <span class="p">=</span> <span class="n">services</span><span class="p">.</span><span class="n">AddRazorPages</span><span class="p">();</span>
-
-<span class="cp">#if DEBUG
-</span><span class="cp"></span>        <span class="k">if</span> <span class="p">(</span><span class="n">Env</span><span class="p">.</span><span class="n">IsDevelopment</span><span class="p">())</span>
-        <span class="p">{</span>
-            <span class="n">builder</span><span class="p">.</span><span class="n">AddRazorRuntimeCompilation</span><span class="p">();</span>
+    <p>In this post I&rsquo;ll show you how you can create visual rules for your <a href="https://www.highcharts.com/">Highcharts</a> when the user is dragging points or bars.</p>
+<h1 id="requirement">Requirement</h1>
+<p>At my current project I have a requirement to visually show the user that their input is invalid. In this case the bar should be red instead of blue. The validation is that at least one of the values should be at the maximum value (10 in my case).
+<img src="/img/highcharts-paint-bar-drag-1.png" alt="Requirement"></p>
+<h1 id="solution">Solution</h1>
+<p>My solution was to create a function that validates the graph data and paint the bars accordingly and call it in the point drop event.</p>
+<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">chart</span> <span class="o">=</span> <span class="nx">Highcharts</span><span class="p">.</span><span class="nx">chart</span><span class="p">(</span><span class="s1">&#39;container&#39;</span><span class="p">,</span> <span class="p">{</span>
+<span class="c1">// ...
+</span><span class="c1"></span>    <span class="nx">plotOptions</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">series</span><span class="o">:</span> <span class="p">{</span>
+            <span class="nx">point</span><span class="o">:</span> <span class="p">{</span>
+                <span class="nx">events</span><span class="o">:</span> <span class="p">{</span>
+                    <span class="nx">drop</span><span class="o">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+                        <span class="nx">paintBars</span><span class="p">();</span>
+                    <span class="p">}</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
         <span class="p">}</span>
-<span class="cp">#endif
-</span><span class="cp"></span>    <span class="p">}</span>
-</code></pre></div><p>Read the <a href="https://docs.microsoft.com/en-us/aspnet/core/mvc/views/view-compilation?view=aspnetcore-3.0&amp;tabs=visual-studio">official documentation</a> for more details or for other versions.</p>
+    <span class="p">}</span>
+<span class="c1">// ...
+</span><span class="c1"></span><span class="p">});</span>
+
+<span class="kd">function</span> <span class="nx">paintBars</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">color</span> <span class="o">=</span> <span class="nx">Highcharts</span><span class="p">.</span><span class="nx">getOptions</span><span class="p">().</span><span class="nx">colors</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
+    
+    <span class="k">if</span> <span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">max</span><span class="p">(...</span><span class="nx">data</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">i</span> <span class="p">=&gt;</span> <span class="nx">i</span><span class="p">.</span><span class="nx">y</span><span class="p">))</span> <span class="o">!=</span> <span class="mi">10</span><span class="p">)</span> <span class="p">{</span>
+  	    <span class="nx">color</span> <span class="o">=</span> <span class="nx">Highcharts</span><span class="p">.</span><span class="nx">getOptions</span><span class="p">().</span><span class="nx">colors</span><span class="p">[</span><span class="mi">8</span><span class="p">]</span>    
+    <span class="p">}</span>
+  
+    <span class="k">if</span> <span class="p">(</span><span class="nx">chart</span><span class="p">.</span><span class="nx">series</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">color</span> <span class="o">!=</span> <span class="nx">color</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">chart</span><span class="p">.</span><span class="nx">series</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">update</span><span class="p">({</span>
+            <span class="nx">color</span><span class="o">:</span> <span class="nx">color</span>
+        <span class="p">});</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div><p><img src="/img/highcharts-paint-bar-drag-2.png" alt="Solution"></p>
+<h1 id="references">References</h1>
+<ul>
+<li><a href="https://jsfiddle.net/petipalmares/7e6hzLqt/">Source Code</a></li>
+<li><a href="https://api.highcharts.com/highcharts/plotOptions.series.point.events.drop">Official documentation - Point drop event</a></li>
+</ul>
 
 </div>
 
@@ -167,14 +171,14 @@ if (!doNotTrack) {
             <span>Tagged:</span>
             
             
-                <a href="/tags/asp.net-core-3.0/">ASP.NET Core 3.0</a>
+                <a href="/tags/highcharts-draggable-points/">Highcharts-draggable-points</a>
             
         </p>
     
 
     <div class="share">
         
-            <a class="icon-twitter" href="https://twitter.com/share?text=Editing%20Razor%20views%20when%20debugging&url=https%3a%2f%2fwww.programmerjourney.com%2frazor-views-debug-edit%2f"
+            <a class="icon-twitter" href="https://twitter.com/share?text=Highcharts%20Draggable%20Bar%20color%20validation&url=https%3a%2f%2fwww.programmerjourney.com%2fhighcharts-paint-bar-drag%2f"
                 onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
                 <i class="fa fa-twitter"></i>
                 <span class="hidden">Twitter</span>
@@ -182,7 +186,7 @@ if (!doNotTrack) {
         
 
         
-            <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.programmerjourney.com%2frazor-views-debug-edit%2f"
+            <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.programmerjourney.com%2fhighcharts-paint-bar-drag%2f"
                 onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
                 <i class="fa fa-facebook"></i>
                 <span class="hidden">Facebook</span>
@@ -190,7 +194,7 @@ if (!doNotTrack) {
         
 
         
-            <a class="icon-google-plus" href="https://plus.google.com/share?url=https%3a%2f%2fwww.programmerjourney.com%2frazor-views-debug-edit%2f"
+            <a class="icon-google-plus" href="https://plus.google.com/share?url=https%3a%2f%2fwww.programmerjourney.com%2fhighcharts-paint-bar-drag%2f"
               onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
               <i class="fa fa-google-plus"></i>
                 <span class="hidden">Google+</span>

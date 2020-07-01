@@ -3,8 +3,8 @@ title = "Starting a programmer's blog"
 description = "Why I'm finally starting my programmer's blog"
 author = "Pedro"
 date = 2020-06-08T22:53:43+01:00
-tags = ["Blog"]
-categories = ["Blog"]
+tags = ["Blogging"]
+categories = ["Blogging"]
 draft = false
 +++
 

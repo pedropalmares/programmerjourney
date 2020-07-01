@@ -5,17 +5,26 @@
     <link>https://www.programmerjourney.com/tags/</link>
     <description>Recent content in Tags on Programmer Journey</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 17 Jun 2020 11:29:02 +0100</lastBuildDate>
+    <lastBuildDate>Wed, 01 Jul 2020 12:10:40 +0100</lastBuildDate>
     
 	<atom:link href="https://www.programmerjourney.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Blog</title>
-      <link>https://www.programmerjourney.com/tags/blog/</link>
+      <title>Highcharts-draggable-points</title>
+      <link>https://www.programmerjourney.com/tags/highcharts-draggable-points/</link>
+      <pubDate>Wed, 01 Jul 2020 12:10:40 +0100</pubDate>
+      
+      <guid>https://www.programmerjourney.com/tags/highcharts-draggable-points/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Blogging</title>
+      <link>https://www.programmerjourney.com/tags/blogging/</link>
       <pubDate>Wed, 17 Jun 2020 11:29:02 +0100</pubDate>
       
-      <guid>https://www.programmerjourney.com/tags/blog/</guid>
+      <guid>https://www.programmerjourney.com/tags/blogging/</guid>
       <description></description>
     </item>
     

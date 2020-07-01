@@ -3,8 +3,8 @@ title = "Adding comments to a Hugo blog with Disqus"
 description = ""
 author = "Pedro"
 date = 2020-06-17T11:29:02+01:00
-tags = ["Blog","Hugo"]
-categories = ["Blog"]
+tags = ["Blogging","Hugo"]
+categories = ["Blogging"]
 draft = false
 +++
 

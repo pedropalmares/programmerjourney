@@ -5,10 +5,41 @@
     <link>https://www.programmerjourney.com/</link>
     <description>Recent content on Programmer Journey</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 17 Jun 2020 11:29:02 +0100</lastBuildDate>
+    <lastBuildDate>Wed, 01 Jul 2020 12:10:40 +0100</lastBuildDate>
     
 	<atom:link href="https://www.programmerjourney.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Add a button to Highcharts</title>
+      <link>https://www.programmerjourney.com/highcharts-add-button/</link>
+      <pubDate>Wed, 01 Jul 2020 12:10:40 +0100</pubDate>
+      
+      <guid>https://www.programmerjourney.com/highcharts-add-button/</guid>
+      <description>Do you know that you can add buttons to your Highcharts graphs? In this post I&amp;rsquo;ll show you how.
+Requirement At my current project I have a requirement to add a button to a bar graph with a Font Awesome icon. In this example my button will show an Hello World alert so you can easily change it for your needs.
+Solution To create the button I used the SVGRenderer that allows to create SVG drawings on your charts.</description>
+    </item>
+    
+    <item>
+      <title>Highcharts Draggable Bar color validation</title>
+      <link>https://www.programmerjourney.com/highcharts-paint-bar-drag/</link>
+      <pubDate>Wed, 01 Jul 2020 11:22:22 +0100</pubDate>
+      
+      <guid>https://www.programmerjourney.com/highcharts-paint-bar-drag/</guid>
+      <description>In this post I&amp;rsquo;ll show you how you can create visual rules for your Highcharts when the user is dragging points or bars.
+Requirement At my current project I have a requirement to visually show the user that their input is invalid. In this case the bar should be red instead of blue. The validation is that at least one of the values should be at the maximum value (10 in my case).</description>
+    </item>
+    
+    <item>
+      <title>Highcharts Draggable Bar workaround</title>
+      <link>https://www.programmerjourney.com/highcharts-draggable-bar/</link>
+      <pubDate>Wed, 01 Jul 2020 10:22:10 +0100</pubDate>
+      
+      <guid>https://www.programmerjourney.com/highcharts-draggable-bar/</guid>
+      <description>I&amp;rsquo;ve been developing charts with Highcharts for around 1 year now. It is a great charting engine and very easy to use so I highly recommend it!
+draggable-points Module One of the modules that I use in some of my graphs is the draggable-points. This module allows to drag and drop points around the graph allowing the user to have a visual input. That small circle at the end of the bar is a visual guidance telling the user that the bar is draggable.</description>
+    </item>
     
     <item>
       <title>Adding comments to a Hugo blog with Disqus</title>
@@ -55,7 +86,7 @@ If you were a designer, an artist or a model you would have for sure a portfolio
       <guid>https://www.programmerjourney.com/page/about/</guid>
       <description>Hi, I&amp;rsquo;m Pedro and I&amp;rsquo;m based in Portugal where I work remotely from my home office.
 I&amp;rsquo;m an experienced software developer &amp;amp; team leader and in this blog I&amp;rsquo;ll be writing my notes on everything I learn in my journey as a programmer. I hope that they are also helpful for you.
-I&amp;rsquo;ve started my programming career with PL/SQL and Oracle database. Some years later I moved to the .NET stack (C# and Razor) and I also develop some projects with Javascript front-end frameworks like Angular and React.</description>
+I&amp;rsquo;ve started my programming career with PL/SQL and Oracle database. Some years later I moved to the .NET stack (C# and Razor) and I also develop some projects with Javascript front-end frameworks such as Angular and React.</description>
     </item>
     
     <item>

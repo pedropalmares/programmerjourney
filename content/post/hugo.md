@@ -3,8 +3,8 @@ title = "Creating a simple free blog"
 description = "Using Hugo + GitHub Pages for hosting"
 author = "Pedro"
 date = 2020-06-06T00:00:00Z
-tags = ["Blog","Hugo"]
-categories = ["Blog"]
+tags = ["Blogging","Hugo"]
+categories = ["Blogging"]
 draft = false
 +++
 

@@ -3,42 +3,67 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://www.programmerjourney.com/highcharts-add-button/</loc>
+    <lastmod>2020-07-01T12:10:40+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.programmerjourney.com/categories/</loc>
+    <lastmod>2020-07-01T12:10:40+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.programmerjourney.com/categories/highcharts/</loc>
+    <lastmod>2020-07-01T12:10:40+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.programmerjourney.com/tags/highcharts-draggable-points/</loc>
+    <lastmod>2020-07-01T12:10:40+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.programmerjourney.com/post/</loc>
+    <lastmod>2020-07-01T12:10:40+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.programmerjourney.com/</loc>
+    <lastmod>2020-07-01T12:10:40+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.programmerjourney.com/tags/</loc>
+    <lastmod>2020-07-01T12:10:40+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.programmerjourney.com/highcharts-paint-bar-drag/</loc>
+    <lastmod>2020-07-01T11:22:22+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.programmerjourney.com/highcharts-draggable-bar/</loc>
+    <lastmod>2020-07-01T10:22:10+01:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://www.programmerjourney.com/hugo-add-disqus/</loc>
     <lastmod>2020-06-17T11:29:02+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.programmerjourney.com/tags/blog/</loc>
+    <loc>https://www.programmerjourney.com/tags/blogging/</loc>
     <lastmod>2020-06-17T11:29:02+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.programmerjourney.com/categories/blog/</loc>
-    <lastmod>2020-06-17T11:29:02+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.programmerjourney.com/categories/</loc>
+    <loc>https://www.programmerjourney.com/categories/blogging/</loc>
     <lastmod>2020-06-17T11:29:02+01:00</lastmod>
   </url>
   
   <url>
     <loc>https://www.programmerjourney.com/tags/hugo/</loc>
-    <lastmod>2020-06-17T11:29:02+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.programmerjourney.com/post/</loc>
-    <lastmod>2020-06-17T11:29:02+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.programmerjourney.com/</loc>
-    <lastmod>2020-06-17T11:29:02+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.programmerjourney.com/tags/</loc>
     <lastmod>2020-06-17T11:29:02+01:00</lastmod>
   </url>
   
