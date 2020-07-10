@@ -3,7 +3,7 @@ title = "Editing Razor views when debugging"
 description = "How to update Razor views without restarting"
 author = "Pedro"
 date = 2020-06-17T10:18:21+01:00
-tags = ["ASP.NET Core 3.0"]
+tags = ["ASP.NET Core 3.0","Razor"]
 categories = ["Razor"]
 draft = false
 +++

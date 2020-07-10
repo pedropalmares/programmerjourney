@@ -3,7 +3,7 @@ title = "Integrate Blazor into Razor Pages"
 description = ""
 author = "Pedro"
 date = 2020-07-10T14:34:41+01:00
-tags = ["Blazor","Razor Pages"]
+tags = ["Blazor","Razor"]
 categories = ["Blazor"]
 draft = false
 +++
