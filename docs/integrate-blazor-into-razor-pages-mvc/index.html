@@ -3,17 +3,19 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Add a button to Highcharts</title>
-        <meta name="description" content="Adding a Font Awesome icon button">
+        <title>Integrate Blazor into Razor Pages and MVC</title>
+        <meta name="description" content="I&rsquo;ve been looking at Blazor components for some time and I was looking for a way to integrate it into my existing ASP.NET Core Web applications. It&rsquo;s very easy!
+ In the layout file _Layout.cshtml add this &lt;base&gt; tag to the &lt;head&gt; element:  &lt;base href=&#34;~/&#34; /&gt; Also in the layout file _Layout.cshtml add this &lt;script&gt; tag before the closing &lt;body&gt; tag:  &lt;script src=&#34;_framework/blazor.server.js&#34;&gt;&lt;/script&gt; Add an _Imports.cshtml to your Pages folder.">
         <meta name="HandheldFriendly" content="True">
         <meta name="MobileOptimized" content="320">
         <meta name="generator" content="Hugo 0.71.0" />
         <meta name="robots" content="index,follow">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta property="og:title" content="Add a button to Highcharts">
-<meta property="og:description" content="Adding a Font Awesome icon button">
+        <meta property="og:title" content="Integrate Blazor into Razor Pages and MVC">
+<meta property="og:description" content="I&rsquo;ve been looking at Blazor components for some time and I was looking for a way to integrate it into my existing ASP.NET Core Web applications. It&rsquo;s very easy!
+ In the layout file _Layout.cshtml add this &lt;base&gt; tag to the &lt;head&gt; element:  &lt;base href=&#34;~/&#34; /&gt; Also in the layout file _Layout.cshtml add this &lt;script&gt; tag before the closing &lt;body&gt; tag:  &lt;script src=&#34;_framework/blazor.server.js&#34;&gt;&lt;/script&gt; Add an _Imports.cshtml to your Pages folder.">
 <meta property="og:type" content="article">
-<meta property="og:url" content="https://www.programmerjourney.com/highcharts-add-button/">
+<meta property="og:url" content="https://www.programmerjourney.com/integrate-blazor-into-razor-pages-mvc/">
         <link rel="stylesheet" href="https://www.programmerjourney.com/dist/site.css">
         <link rel="stylesheet" href="https://www.programmerjourney.com/dist/syntax.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,600,700,300&subset=latin,cyrillic-ext,latin-ext,cyrillic">
@@ -106,12 +108,10 @@ if (!doNotTrack) {
 <div class="container">
     <article class="post-container" itemscope="" itemtype="http://schema.org/BlogPosting">
         <header class="post-header">
-    <h1 class="post-title" itemprop="name headline">Add a button to Highcharts</h1>
-    
-        <p class="post-description" itemprop="description">Adding a Font Awesome icon button</p>
+    <h1 class="post-title" itemprop="name headline">Integrate Blazor into Razor Pages and MVC</h1>
     
     <p class="post-date post-line">
-        <span><time datetime="2020-07-01" itemprop="datePublished">Wed, Jul 1, 2020</time></span>
+        <span><time datetime="2020-07-10" itemprop="datePublished">Fri, Jul 10, 2020</time></span>
         <span>by</span>
         <span itemscope="" itemprop="author" itemtype="https://schema.org/Person">
             <span itemprop="name">
@@ -125,35 +125,30 @@ if (!doNotTrack) {
         <div class="post-content clearfix" itemprop="articleBody">
     
 
-    <p>Do you know that you can add buttons to your <a href="https://www.highcharts.com/">Highcharts</a> graphs? In this post I&rsquo;ll show you how.</p>
-<h1 id="requirement">Requirement</h1>
-<p>At my current project I have a requirement to add a button to a bar graph with a <a href="https://fontawesome.com/">Font Awesome</a> icon. In this example my button will show an Hello World alert so you can easily change it for your needs.</p>
-<h1 id="solution">Solution</h1>
-<p>To create the button I used the <a href="https://api.highcharts.com/class-reference/Highcharts.SVGRenderer">SVGRenderer</a> that allows to create SVG drawings on your charts. The <a href="https://api.highcharts.com/class-reference/Highcharts.SVGRenderer#button">SVGRenderer.button</a> method allows to render the label using HTML (property <code>useHTML</code>) so you can easily draw the <a href="https://fontawesome.com/">Font Awesome</a> icon on it. This code should be added to the chart load event.</p>
-<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="nx">Highcharts</span><span class="p">.</span><span class="nx">chart</span><span class="p">(</span><span class="s1">&#39;container&#39;</span><span class="p">,</span> <span class="p">{</span>
-  <span class="nx">chart</span><span class="o">:</span> <span class="p">{</span>
-    <span class="nx">type</span><span class="o">:</span> <span class="s1">&#39;bar&#39;</span><span class="p">,</span>
-    <span class="nx">events</span><span class="o">:</span> <span class="p">{</span>
-      <span class="nx">load</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-        <span class="k">this</span><span class="p">.</span><span class="nx">renderer</span><span class="p">.</span><span class="nx">button</span><span class="p">(</span><span class="s1">&#39;&lt;i class=&#34;fas fa-chart-line&#34;&gt;&lt;/i&gt;&#39;</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-          <span class="c1">// Add your code here
-</span><span class="c1"></span>          <span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;Hello world!&#39;</span><span class="p">);</span>
-        <span class="p">},</span> <span class="p">{</span>
-          <span class="nx">height</span><span class="o">:</span> <span class="mi">16</span><span class="p">,</span>
-          <span class="nx">width</span><span class="o">:</span> <span class="mi">16</span><span class="p">,</span>
-          <span class="s1">&#39;text-align&#39;</span><span class="o">:</span> <span class="s1">&#39;center&#39;</span>
-        <span class="p">},</span> <span class="kc">null</span><span class="p">,</span> <span class="kc">null</span><span class="p">,</span> <span class="kc">null</span><span class="p">,</span> <span class="kc">null</span><span class="p">,</span> <span class="kc">true</span><span class="p">).</span><span class="nx">add</span><span class="p">()</span>
-      <span class="p">}</span>
-    <span class="p">}</span>
-  <span class="p">},</span>
-<span class="c1">//...
-</span><span class="c1"></span><span class="p">}</span>
-</code></pre></div><h1 id="references">References</h1>
-<ul>
-<li><a href="https://jsfiddle.net/petipalmares/8hzq4gaL/">Source code</a></li>
-<li><a href="https://api.highcharts.com/class-reference/Highcharts.SVGRenderer">Official documentation - SVGRenderer</a></li>
-<li><a href="https://www.highcharts.com/demo/renderer">Official demo - SVGRenderer</a></li>
-</ul>
+    <p>I&rsquo;ve been looking at Blazor components for some time and I was looking for a way to integrate it into my existing ASP.NET Core Web applications. It&rsquo;s very easy!</p>
+<ol>
+<li>In the layout file <code>_Layout.cshtml</code> add this <code>&lt;base&gt;</code> tag to the <code>&lt;head&gt;</code> element:</li>
+</ol>
+<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">base</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;~/&#34;</span> <span class="p">/&gt;</span>
+</code></pre></div><ol start="2">
+<li>Also in the layout file <code>_Layout.cshtml</code> add this <code>&lt;script&gt;</code> tag before the closing <code>&lt;body&gt;</code> tag:</li>
+</ol>
+<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;_framework/blazor.server.js&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</code></pre></div><ol start="3">
+<li>Add an <code>_Imports.cshtml</code> to your <code>Pages</code> folder.</li>
+</ol>
+<div class="highlight"><pre class="chroma"><code class="language-cs" data-lang="cs"><span class="n">@using</span> <span class="n">System</span><span class="p">.</span><span class="n">Net</span><span class="p">.</span><span class="n">Http</span>
+<span class="n">@using</span> <span class="n">Microsoft</span><span class="p">.</span><span class="n">AspNetCore</span><span class="p">.</span><span class="n">Authorization</span>
+<span class="n">@using</span> <span class="n">Microsoft</span><span class="p">.</span><span class="n">AspNetCore</span><span class="p">.</span><span class="n">Components</span><span class="p">.</span><span class="n">Authorization</span>
+<span class="n">@using</span> <span class="n">Microsoft</span><span class="p">.</span><span class="n">AspNetCore</span><span class="p">.</span><span class="n">Components</span><span class="p">.</span><span class="n">Forms</span>
+<span class="n">@using</span> <span class="n">Microsoft</span><span class="p">.</span><span class="n">AspNetCore</span><span class="p">.</span><span class="n">Components</span><span class="p">.</span><span class="n">Routing</span>
+<span class="n">@using</span> <span class="n">Microsoft</span><span class="p">.</span><span class="n">AspNetCore</span><span class="p">.</span><span class="n">Components</span><span class="p">.</span><span class="n">Web</span>
+<span class="n">@using</span> <span class="n">Microsoft</span><span class="p">.</span><span class="n">JSInterop</span>
+<span class="hl"><span class="n">@using</span> <span class="n">MyNamespace</span>    <span class="c1">// Change to your namespace
+</span></span></code></pre></div><p>Put your namespace in the highlighted row</p>
+<ol start="4">
+<li>as</li>
+</ol>
 
 </div>
 
@@ -163,14 +158,16 @@ if (!doNotTrack) {
             <span>Tagged:</span>
             
             
-                <a href="/tags/highcharts-draggable-points/">Highcharts-draggable-points</a>
+                <a href="/tags/blazor/">Blazor</a>, 
+            
+                <a href="/tags/razor-pages/">Razor Pages</a>
             
         </p>
     
 
     <div class="share">
         
-            <a class="icon-twitter" href="https://twitter.com/share?text=Add%20a%20button%20to%20Highcharts&url=https%3a%2f%2fwww.programmerjourney.com%2fhighcharts-add-button%2f"
+            <a class="icon-twitter" href="https://twitter.com/share?text=Integrate%20Blazor%20into%20Razor%20Pages%20and%20MVC&url=https%3a%2f%2fwww.programmerjourney.com%2fintegrate-blazor-into-razor-pages-mvc%2f"
                 onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
                 <i class="fa fa-twitter"></i>
                 <span class="hidden">Twitter</span>
@@ -178,7 +175,7 @@ if (!doNotTrack) {
         
 
         
-            <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.programmerjourney.com%2fhighcharts-add-button%2f"
+            <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.programmerjourney.com%2fintegrate-blazor-into-razor-pages-mvc%2f"
                 onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
                 <i class="fa fa-facebook"></i>
                 <span class="hidden">Facebook</span>
@@ -186,7 +183,7 @@ if (!doNotTrack) {
         
 
         
-            <a class="icon-google-plus" href="https://plus.google.com/share?url=https%3a%2f%2fwww.programmerjourney.com%2fhighcharts-add-button%2f"
+            <a class="icon-google-plus" href="https://plus.google.com/share?url=https%3a%2f%2fwww.programmerjourney.com%2fintegrate-blazor-into-razor-pages-mvc%2f"
               onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
               <i class="fa fa-google-plus"></i>
                 <span class="hidden">Google+</span>

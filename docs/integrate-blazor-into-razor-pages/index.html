@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Integrate Blazor into Razor Pages</title>
+        <meta name="description" content="I&rsquo;ve been looking at Blazor components for some time and I was looking for a way to integrate them into my existing ASP.NET Core 3.1 Web applications. It&rsquo;s very easy!
+Setup In the layout file _Layout.cshtml add this &lt;base&gt; tag to the &lt;head&gt; element:
+&lt;base href=&#34;~/&#34; /&gt; Also in the layout file _Layout.cshtml add this &lt;script&gt; tag before the closing &lt;body&gt; tag:
+&lt;script src=&#34;_framework/blazor.server.js&#34;&gt;&lt;/script&gt; Add an _Imports.razor Blazor component to your Pages folder:">
+        <meta name="HandheldFriendly" content="True">
+        <meta name="MobileOptimized" content="320">
+        <meta name="generator" content="Hugo 0.71.0" />
+        <meta name="robots" content="index,follow">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta property="og:title" content="Integrate Blazor into Razor Pages">
+<meta property="og:description" content="I&rsquo;ve been looking at Blazor components for some time and I was looking for a way to integrate them into my existing ASP.NET Core 3.1 Web applications. It&rsquo;s very easy!
+Setup In the layout file _Layout.cshtml add this &lt;base&gt; tag to the &lt;head&gt; element:
+&lt;base href=&#34;~/&#34; /&gt; Also in the layout file _Layout.cshtml add this &lt;script&gt; tag before the closing &lt;body&gt; tag:
+&lt;script src=&#34;_framework/blazor.server.js&#34;&gt;&lt;/script&gt; Add an _Imports.razor Blazor component to your Pages folder:">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://www.programmerjourney.com/integrate-blazor-into-razor-pages/">
+        <link rel="stylesheet" href="https://www.programmerjourney.com/dist/site.css">
+        <link rel="stylesheet" href="https://www.programmerjourney.com/dist/syntax.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,600,700,300&subset=latin,cyrillic-ext,latin-ext,cyrillic">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+        
+        <style>
+    #wrapper {
+        margin-bottom: -95px;
+    }
+
+    .footer {
+        height: 95px;
+        margin-top: 0px;
+    }
+
+    .footer .site-title-wrapper {
+        margin: 35px auto;
+    }
+</style>
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+        
+        
+    </head>
+    <body>
+        
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-168158575-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+
+        <div id="wrapper">
+            <header class="site-header">
+                <div class="container">
+                    <div class="site-title-wrapper">
+                        
+                            <h1 class="site-title">
+                                <a title="Programmer Journey" href="https://www.programmerjourney.com/">Programmer Journey</a>
+                            </h1>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                    </div>
+
+                    <ul class="site-nav">
+                        
+    <li class="site-nav-item">
+        <a title="Blazor" href="https://www.programmerjourney.com/categories/blazor/">Blazor</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a title="Blogging" href="https://www.programmerjourney.com/categories/blogging/">Blogging</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a title="Highcharts" href="https://www.programmerjourney.com/categories/highcharts/">Highcharts</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a title="Razor" href="https://www.programmerjourney.com/categories/razor/">Razor</a>
+    </li>
+
+
+
+    <li class="site-nav-item">
+        <a title="About" href="/page/about/">About</a>
+    </li>
+
+                    </ul>
+                </div>
+            </header>
+
+            <div id="container">
+
+
+<div class="container">
+    <article class="post-container" itemscope="" itemtype="http://schema.org/BlogPosting">
+        <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Integrate Blazor into Razor Pages</h1>
+    
+    <p class="post-date post-line">
+        <span><time datetime="2020-07-10" itemprop="datePublished">Fri, Jul 10, 2020</time></span>
+        <span>by</span>
+        <span itemscope="" itemprop="author" itemtype="https://schema.org/Person">
+            <span itemprop="name">
+                <a href="#" itemprop="url" rel="author">Pedro</a>
+            </span>
+        </span>
+    </p>
+    
+</header>
+
+        <div class="post-content clearfix" itemprop="articleBody">
+    
+
+    <p>I&rsquo;ve been looking at Blazor components for some time and I was looking for a way to integrate them into my existing ASP.NET Core 3.1 Web applications. It&rsquo;s very easy!</p>
+<h1 id="setup">Setup</h1>
+<p>In the layout file <code>_Layout.cshtml</code> add this <code>&lt;base&gt;</code> tag to the <code>&lt;head&gt;</code> element:</p>
+<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">base</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;~/&#34;</span> <span class="p">/&gt;</span>
+</code></pre></div><p>Also in the layout file <code>_Layout.cshtml</code> add this <code>&lt;script&gt;</code> tag before the closing <code>&lt;body&gt;</code> tag:</p>
+<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;_framework/blazor.server.js&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</code></pre></div><p>Add an <code>_Imports.razor</code> Blazor component to your <code>Pages</code> folder:</p>
+<div class="highlight"><pre class="chroma"><code class="language-cs" data-lang="cs"><span class="n">@using</span> <span class="n">System</span><span class="p">.</span><span class="n">Net</span><span class="p">.</span><span class="n">Http</span>
+<span class="n">@using</span> <span class="n">Microsoft</span><span class="p">.</span><span class="n">AspNetCore</span><span class="p">.</span><span class="n">Authorization</span>
+<span class="n">@using</span> <span class="n">Microsoft</span><span class="p">.</span><span class="n">AspNetCore</span><span class="p">.</span><span class="n">Components</span><span class="p">.</span><span class="n">Authorization</span>
+<span class="n">@using</span> <span class="n">Microsoft</span><span class="p">.</span><span class="n">AspNetCore</span><span class="p">.</span><span class="n">Components</span><span class="p">.</span><span class="n">Forms</span>
+<span class="n">@using</span> <span class="n">Microsoft</span><span class="p">.</span><span class="n">AspNetCore</span><span class="p">.</span><span class="n">Components</span><span class="p">.</span><span class="n">Routing</span>
+<span class="n">@using</span> <span class="n">Microsoft</span><span class="p">.</span><span class="n">AspNetCore</span><span class="p">.</span><span class="n">Components</span><span class="p">.</span><span class="n">Web</span>
+<span class="n">@using</span> <span class="n">Microsoft</span><span class="p">.</span><span class="n">JSInterop</span>
+
+<span class="c1">// Change row below to use your namespace
+</span><span class="c1"></span><span class="n">@using</span> <span class="n">MyNamespace</span>          
+</code></pre></div><p>In <code>Startup.cs</code> file register the Blazor Service, map the Blazor Hub endpoint and a fallback:</p>
+<div class="highlight"><pre class="chroma"><code class="language-cs" data-lang="cs"><span class="k">public</span> <span class="k">void</span> <span class="n">ConfigureServices</span><span class="p">(</span><span class="n">IServiceCollection</span> <span class="n">services</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">services</span><span class="p">.</span><span class="n">AddRazorPages</span><span class="p">();</span>
+    <span class="n">services</span><span class="p">.</span><span class="n">AddServerSideBlazor</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="k">public</span> <span class="k">void</span> <span class="n">Configure</span><span class="p">(</span><span class="n">IApplicationBuilder</span> <span class="n">app</span><span class="p">,</span> <span class="n">IWebHostEnvironment</span> <span class="n">env</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="p">...</span>
+
+    <span class="n">app</span><span class="p">.</span><span class="n">UseEndpoints</span><span class="p">(</span><span class="n">endpoints</span> <span class="p">=&gt;</span>
+    <span class="p">{</span>
+        <span class="n">endpoints</span><span class="p">.</span><span class="n">MapRazorPages</span><span class="p">();</span>
+        <span class="n">endpoints</span><span class="p">.</span><span class="n">MapBlazorHub</span><span class="p">();</span>
+        <span class="n">endpoints</span><span class="p">.</span><span class="n">MapFallbackToPage</span><span class="p">(</span><span class="s">&#34;/_Host&#34;</span><span class="p">);</span>
+    <span class="p">});</span>
+<span class="p">}</span>
+</code></pre></div><p>Add an <code>App.razor</code> Razor component to your <code>Pages</code> folder:</p>
+<div class="highlight"><pre class="chroma"><code class="language-cs" data-lang="cs"><span class="n">@using</span> <span class="n">Microsoft</span><span class="p">.</span><span class="n">AspNetCore</span><span class="p">.</span><span class="n">Components</span><span class="p">.</span><span class="n">Routing</span>
+
+<span class="p">&lt;</span><span class="n">Router</span> <span class="n">AppAssembly</span><span class="p">=</span><span class="s">&#34;typeof(Program).Assembly&#34;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="n">Found</span> <span class="n">Context</span><span class="p">=</span><span class="s">&#34;routeData&#34;</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="n">RouteView</span> <span class="n">RouteData</span><span class="p">=</span><span class="s">&#34;routeData&#34;</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;/</span><span class="n">Found</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="n">NotFound</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="n">h1</span><span class="p">&gt;</span><span class="n">Page</span> <span class="n">not</span> <span class="n">found</span><span class="p">&lt;/</span><span class="n">h1</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="n">NotFound</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="n">Router</span><span class="p">&gt;</span>
+</code></pre></div><p>Add a <code>_Host.cshtml</code> Razor file to your <code>Pages</code> folder:</p>
+<div class="highlight"><pre class="chroma"><code class="language-cs" data-lang="cs"><span class="n">@page</span> <span class="s">&#34;/blazor&#34;</span>
+<span class="err">@</span><span class="p">{</span>
+    <span class="n">Layout</span> <span class="p">=</span> <span class="s">&#34;_Layout&#34;</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">&lt;</span><span class="n">app</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="n">component</span> <span class="n">type</span><span class="p">=</span><span class="s">&#34;typeof(App)&#34;</span> <span class="n">render</span><span class="p">-</span><span class="n">mode</span><span class="p">=</span><span class="s">&#34;Server&#34;</span> <span class="p">/&gt;</span>
+<span class="p">&lt;/</span><span class="n">app</span><span class="p">&gt;</span>
+</code></pre></div><h1 id="adding-blazor-components">Adding Blazor components</h1>
+<p>For my example I&rsquo;m creating a Time component to show current date and time.
+Create a <code>Time.razor</code> Blazor component in your <code>Pages</code> folder:</p>
+<div class="highlight"><pre class="chroma"><code class="language-cs" data-lang="cs"><span class="n">@page</span> <span class="s">&#34;/time&#34;</span>
+
+<span class="p">&lt;</span><span class="n">h1</span><span class="p">&gt;</span><span class="n">@time</span><span class="p">&lt;/</span><span class="n">h1</span><span class="p">&gt;</span>
+
+<span class="n">@code</span> <span class="p">{</span>
+    <span class="k">private</span> <span class="n">DateTime</span> <span class="n">time</span><span class="p">;</span>
+
+    <span class="k">protected</span> <span class="k">override</span> <span class="k">void</span> <span class="n">OnInitialized</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="n">time</span> <span class="p">=</span> <span class="n">DateTime</span><span class="p">.</span><span class="n">Now</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div><p>To add this Blazor component into your existing Index.cshtml file just add:</p>
+<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">component</span><span class="p">&gt;</span>
+    @(await Html.RenderComponentAsync<span class="p">&lt;</span><span class="nt">IntegratingBlazor.Pages.Time</span><span class="p">&gt;</span>(RenderMode.Server))
+<span class="p">&lt;/</span><span class="nt">component</span><span class="p">&gt;</span>
+</code></pre></div><p><img src="/img/integrate-blazor-into-razor-pages-1.png" alt="Blazor component in Razor page"></p>
+<p>Or open this Blazor component in a new page just by browsing to the <code>/time</code> url.
+<img src="/img/integrate-blazor-into-razor-pages-2.png" alt="Blazor component in new page"></p>
+<p>Let me know you if you have any problem with your code!</p>
+
+</div>
+
+        <footer class="post-footer clearfix">
+    
+        <p class="post-tags">
+            <span>Tagged:</span>
+            
+            
+                <a href="/tags/blazor/">Blazor</a>, 
+            
+                <a href="/tags/razor-pages/">Razor Pages</a>
+            
+        </p>
+    
+
+    <div class="share">
+        
+            <a class="icon-twitter" href="https://twitter.com/share?text=Integrate%20Blazor%20into%20Razor%20Pages&url=https%3a%2f%2fwww.programmerjourney.com%2fintegrate-blazor-into-razor-pages%2f"
+                onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                <i class="fa fa-twitter"></i>
+                <span class="hidden">Twitter</span>
+            </a>
+        
+
+        
+            <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.programmerjourney.com%2fintegrate-blazor-into-razor-pages%2f"
+                onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                <i class="fa fa-facebook"></i>
+                <span class="hidden">Facebook</span>
+            </a>
+        
+
+        
+            <a class="icon-google-plus" href="https://plus.google.com/share?url=https%3a%2f%2fwww.programmerjourney.com%2fintegrate-blazor-into-razor-pages%2f"
+              onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+              <i class="fa fa-google-plus"></i>
+                <span class="hidden">Google+</span>
+            </a>
+        
+        
+    </div>
+</footer>
+
+        
+    <div class="comments">
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "programmerjourney" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </div>
+
+    </article>
+</div>
+
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="site-title-wrapper">
+                    <p class="footer-copyright">
+                        <span>&copy; 2020 Programmer Journey</span>
+                    </p>
+                </div>
+            </div>
+        </footer>
+
+        <script src="https://www.programmerjourney.com/js/jquery-1.11.3.min.js"></script>
+        <script src="https://www.programmerjourney.com/js/jquery.fitvids.js"></script>
+        <script src="https://www.programmerjourney.com/js/scripts.js"></script>
+    </body>
+</html>
+
