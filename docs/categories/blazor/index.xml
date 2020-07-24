@@ -5,10 +5,20 @@
     <link>https://www.programmerjourney.com/categories/blazor/</link>
     <description>Recent content in Blazor on Programmer Journey</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 10 Jul 2020 14:34:41 +0100</lastBuildDate>
+    <lastBuildDate>Fri, 24 Jul 2020 17:00:28 +0100</lastBuildDate>
     
 	<atom:link href="https://www.programmerjourney.com/categories/blazor/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Forcing parent component to refresh when using a State container</title>
+      <link>https://www.programmerjourney.com/blazor-forcing-parent-refresh-state-container/</link>
+      <pubDate>Fri, 24 Jul 2020 17:00:28 +0100</pubDate>
+      
+      <guid>https://www.programmerjourney.com/blazor-forcing-parent-refresh-state-container/</guid>
+      <description>One of the ways that I use to communicate between Blazor components in large applications is to use a state container. In this post I&amp;rsquo;ll show you how you can force the parent container to refresh when needed. You can find the source code for this here.
+In this example, we have a page with two components where each component has a button and also an alert showing the selected component.</description>
+    </item>
     
     <item>
       <title>Integrate Blazor into Razor Pages</title>
