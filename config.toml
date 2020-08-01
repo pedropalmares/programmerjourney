@@ -16,6 +16,7 @@ pygmentsCodeFences = true
     description = "My journey as a programmer"
     opengraph = true
     dateFormat = "Mon, Jan 2, 2006"
+    email = "pedro@programmerjourney.com"
 
 [Permalinks]
     post = "/:filename/"
