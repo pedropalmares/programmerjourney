@@ -3,7 +3,7 @@
         <a title="{{ .Page.Title }}" href="{{ .Page.Permalink }}">{{ .Page.Title }}</a>
     </li>
 {{ end }}
-
+| 
 {{ range .Site.Menus.main.ByWeight }}
     <li class="site-nav-item">
         <a title="{{ .Name }}" href="{{ .URL }}">{{ .Name }}</a>
