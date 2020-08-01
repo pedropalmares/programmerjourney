@@ -14,7 +14,7 @@ In this example, we have a page with two components where each component has a b
 
 ![Example](/img/blazor-forcing-parent-refresh-state-container-1.png)
 
-## State container
+# State container
 In this example, we have a simple `VehicleState` class as our state container. 
 ```cs
 public class VehicleState

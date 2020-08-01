@@ -3,6 +3,41 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://www.programmerjourney.com/tags/c#/</loc>
+    <lastmod>2020-08-01T07:23:33+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.programmerjourney.com/categories/c#/</loc>
+    <lastmod>2020-08-01T07:23:33+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.programmerjourney.com/csharp-list-tuples-named-fields/</loc>
+    <lastmod>2020-08-01T07:23:33+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.programmerjourney.com/categories/</loc>
+    <lastmod>2020-08-01T07:23:33+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.programmerjourney.com/post/</loc>
+    <lastmod>2020-08-01T07:23:33+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.programmerjourney.com/</loc>
+    <lastmod>2020-08-01T07:23:33+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.programmerjourney.com/tags/</loc>
+    <lastmod>2020-08-01T07:23:33+01:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://www.programmerjourney.com/tags/blazor/</loc>
     <lastmod>2020-07-24T17:00:28+01:00</lastmod>
   </url>
@@ -13,27 +48,7 @@
   </url>
   
   <url>
-    <loc>https://www.programmerjourney.com/categories/</loc>
-    <lastmod>2020-07-24T17:00:28+01:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://www.programmerjourney.com/blazor-forcing-parent-refresh-state-container/</loc>
-    <lastmod>2020-07-24T17:00:28+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.programmerjourney.com/post/</loc>
-    <lastmod>2020-07-24T17:00:28+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.programmerjourney.com/</loc>
-    <lastmod>2020-07-24T17:00:28+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.programmerjourney.com/tags/</loc>
     <lastmod>2020-07-24T17:00:28+01:00</lastmod>
   </url>
   

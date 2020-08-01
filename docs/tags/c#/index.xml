@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>C# on Programmer Journey</title>
+    <link>https://www.programmerjourney.com/tags/c#/</link>
+    <description>Recent content in C# on Programmer Journey</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sat, 01 Aug 2020 07:23:33 +0100</lastBuildDate>
+    
+	<atom:link href="https://www.programmerjourney.com/tags/c#/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>C# List of Tuples with Named Fields</title>
+      <link>https://www.programmerjourney.com/csharp-list-tuples-named-fields/</link>
+      <pubDate>Sat, 01 Aug 2020 07:23:33 +0100</pubDate>
+      
+      <guid>https://www.programmerjourney.com/csharp-list-tuples-named-fields/</guid>
+      <description>One of these days I was developing a project using tuples with named fields, making it easier to understand the code when using tuples. I then wanted to create a List of them but the way to do it didn&amp;rsquo;t seem to be straightforward to me. So I decided to show you all the use cases of tuples in this post.
+Unnamed fields tuple This is the most simple case of tuples when you don&amp;rsquo;t specify a name to the fields and they are named by Item1, Item2, etc.</description>
+    </item>
+    
+  </channel>
+</rss>
