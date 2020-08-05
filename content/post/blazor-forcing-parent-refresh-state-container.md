@@ -1,5 +1,5 @@
 +++
-title = "Forcing parent component to refresh when using a State container"
+title = "Forcing parent component to refresh when using a State container in Blazor"
 description = ""
 author = "Pedro"
 date = 2020-07-24T17:00:28+01:00
@@ -75,6 +75,8 @@ These child components update the selected vehicle in the state container when a
 
 ```html 
 @inject VehicleState VehicleState
+
+@implements IDisposable
 
 <VehicleSedan />
 <VehicleCoupe />
