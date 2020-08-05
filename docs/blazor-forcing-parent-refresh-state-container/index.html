@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Forcing parent component to refresh when using a State container</title>
+        <title>Forcing parent component to refresh when using a State container in Blazor</title>
         <meta name="description" content="One of the ways that I use to communicate between Blazor components in large applications is to use a state container. In this post I&rsquo;ll show you how you can force the parent container to refresh when needed. You can find the source code for this here.
 In this example, we have a page with two components where each component has a button and also an alert showing the selected component.">
         <meta name="HandheldFriendly" content="True">
@@ -11,7 +11,7 @@ In this example, we have a page with two components where each component has a b
         <meta name="generator" content="Hugo 0.71.0" />
         <meta name="robots" content="index,follow">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta property="og:title" content="Forcing parent component to refresh when using a State container">
+        <meta property="og:title" content="Forcing parent component to refresh when using a State container in Blazor">
 <meta property="og:description" content="One of the ways that I use to communicate between Blazor components in large applications is to use a state container. In this post I&rsquo;ll show you how you can force the parent container to refresh when needed. You can find the source code for this here.
 In this example, we have a page with two components where each component has a button and also an alert showing the selected component.">
 <meta property="og:type" content="article">
@@ -102,7 +102,7 @@ if (!doNotTrack) {
 <div class="container">
     <article class="post-container" itemscope="" itemtype="http://schema.org/BlogPosting">
         <header class="post-header">
-    <h1 class="post-title" itemprop="name headline">Forcing parent component to refresh when using a State container</h1>
+    <h1 class="post-title" itemprop="name headline">Forcing parent component to refresh when using a State container in Blazor</h1>
     
     <p class="post-date post-line">
         <span><time datetime="2020-07-24" itemprop="datePublished">Fri, Jul 24, 2020</time></span>
@@ -170,6 +170,8 @@ if (!doNotTrack) {
 <h1 id="parent-component">Parent component</h1>
 <div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html">@inject VehicleState VehicleState
 
+@implements IDisposable
+
 <span class="p">&lt;</span><span class="nt">VehicleSedan</span> <span class="p">/&gt;</span>
 <span class="p">&lt;</span><span class="nt">VehicleCoupe</span> <span class="p">/&gt;</span>
 
@@ -210,7 +212,7 @@ Don&rsquo;t forget to unsubscribe from <code>VehicleState.OnChange</code> to pre
 
     <div class="share">
         
-            <a class="icon-twitter" href="https://twitter.com/share?text=Forcing%20parent%20component%20to%20refresh%20when%20using%20a%20State%20container&url=https%3a%2f%2fwww.programmerjourney.com%2fblazor-forcing-parent-refresh-state-container%2f"
+            <a class="icon-twitter" href="https://twitter.com/share?text=Forcing%20parent%20component%20to%20refresh%20when%20using%20a%20State%20container%20in%20Blazor&url=https%3a%2f%2fwww.programmerjourney.com%2fblazor-forcing-parent-refresh-state-container%2f"
                 onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
                 <i class="fa fa-twitter"></i>
                 <span class="hidden">Twitter</span>
