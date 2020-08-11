@@ -3,6 +3,31 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://www.programmerjourney.com/categories/</loc>
+    <lastmod>2020-08-11T10:41:41+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.programmerjourney.com/categories/highcharts/</loc>
+    <lastmod>2020-08-11T10:41:41+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.programmerjourney.com/post/</loc>
+    <lastmod>2020-08-11T10:41:41+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.programmerjourney.com/</loc>
+    <lastmod>2020-08-11T10:41:41+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.programmerjourney.com/highcharts-legend-tooltip/</loc>
+    <lastmod>2020-08-11T10:41:41+01:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://www.programmerjourney.com/tags/c#/</loc>
     <lastmod>2020-08-01T07:23:33+01:00</lastmod>
   </url>
@@ -14,21 +39,6 @@
   
   <url>
     <loc>https://www.programmerjourney.com/csharp-list-tuples-named-fields/</loc>
-    <lastmod>2020-08-01T07:23:33+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.programmerjourney.com/categories/</loc>
-    <lastmod>2020-08-01T07:23:33+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.programmerjourney.com/post/</loc>
-    <lastmod>2020-08-01T07:23:33+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.programmerjourney.com/</loc>
     <lastmod>2020-08-01T07:23:33+01:00</lastmod>
   </url>
   
@@ -64,11 +74,6 @@
   
   <url>
     <loc>https://www.programmerjourney.com/highcharts-add-button/</loc>
-    <lastmod>2020-07-01T12:10:40+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.programmerjourney.com/categories/highcharts/</loc>
     <lastmod>2020-07-01T12:10:40+01:00</lastmod>
   </url>
   

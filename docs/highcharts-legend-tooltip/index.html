@@ -3,17 +3,17 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Add a button to Highcharts</title>
-        <meta name="description" content="Adding a Font Awesome icon button">
+        <title>Tooltip on a Highcharts Legend</title>
+        <meta name="description" content="Showing a tooltip for a legend on mouse over">
         <meta name="HandheldFriendly" content="True">
         <meta name="MobileOptimized" content="320">
         <meta name="generator" content="Hugo 0.71.0" />
         <meta name="robots" content="index,follow">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta property="og:title" content="Add a button to Highcharts">
-<meta property="og:description" content="Adding a Font Awesome icon button">
+        <meta property="og:title" content="Tooltip on a Highcharts Legend">
+<meta property="og:description" content="Showing a tooltip for a legend on mouse over">
 <meta property="og:type" content="article">
-<meta property="og:url" content="https://www.programmerjourney.com/highcharts-add-button/">
+<meta property="og:url" content="https://www.programmerjourney.com/highcharts-legend-tooltip/">
         <link rel="stylesheet" href="https://www.programmerjourney.com/dist/site.css">
         <link rel="stylesheet" href="https://www.programmerjourney.com/dist/syntax.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,600,700,300&subset=latin,cyrillic-ext,latin-ext,cyrillic">
@@ -100,12 +100,12 @@ if (!doNotTrack) {
 <div class="container">
     <article class="post-container" itemscope="" itemtype="http://schema.org/BlogPosting">
         <header class="post-header">
-    <h1 class="post-title" itemprop="name headline">Add a button to Highcharts</h1>
+    <h1 class="post-title" itemprop="name headline">Tooltip on a Highcharts Legend</h1>
     
-        <p class="post-description" itemprop="description">Adding a Font Awesome icon button</p>
+        <p class="post-description" itemprop="description">Showing a tooltip for a legend on mouse over</p>
     
     <p class="post-date post-line">
-        <span><time datetime="2020-07-01" itemprop="datePublished">Wed, Jul 1, 2020</time></span>
+        <span><time datetime="2020-08-11" itemprop="datePublished">Tue, Aug 11, 2020</time></span>
         <span>by</span>
         <span itemscope="" itemprop="author" itemtype="https://schema.org/Person">
             <span itemprop="name">
@@ -119,52 +119,46 @@ if (!doNotTrack) {
         <div class="post-content clearfix" itemprop="articleBody">
     
 
-    <p>Do you know that you can add buttons to your <a href="https://www.highcharts.com/">Highcharts</a> graphs? In this post I&rsquo;ll show you how.</p>
+    <p>Looking for a way to add tooltips to the legends of your <a href="https://www.highcharts.com/">Highcharts</a> charts? Let me show you how to do it.</p>
 <h1 id="requirement">Requirement</h1>
-<p>At my current project I have a requirement to add a button to a bar graph with a <a href="https://fontawesome.com/">Font Awesome</a> icon. In this example my button will show an Hello World alert so you can easily change it for your needs.</p>
+<p>At my current project we use a lot of initials and abbreviations and we decided that a tooltip on a legend would be the most effective way to show a quick explanation to the user.</p>
 <h1 id="solution">Solution</h1>
-<p>To create the button I used the <a href="https://api.highcharts.com/class-reference/Highcharts.SVGRenderer">SVGRenderer</a> that allows to create SVG drawings on your charts. The <a href="https://api.highcharts.com/class-reference/Highcharts.SVGRenderer#button">SVGRenderer.button</a> method allows to render the label using HTML (property <code>useHTML</code>) so you can easily draw the <a href="https://fontawesome.com/">Font Awesome</a> icon on it. This code should be added to the chart load event.</p>
+<p>To create the tooltip we just need to change the chart&rsquo;s options to enable the <code>useHTML</code> property to render the legend and add the tooltip logic to the <code>labelFormatter</code> property.</p>
 <div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="nx">Highcharts</span><span class="p">.</span><span class="nx">chart</span><span class="p">(</span><span class="s1">&#39;container&#39;</span><span class="p">,</span> <span class="p">{</span>
-  <span class="nx">chart</span><span class="o">:</span> <span class="p">{</span>
-    <span class="nx">type</span><span class="o">:</span> <span class="s1">&#39;bar&#39;</span><span class="p">,</span>
-    <span class="nx">events</span><span class="o">:</span> <span class="p">{</span>
-      <span class="nx">load</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-        <span class="k">this</span><span class="p">.</span><span class="nx">renderer</span><span class="p">.</span><span class="nx">button</span><span class="p">(</span><span class="s1">&#39;&lt;i class=&#34;fas fa-chart-line&#34;&gt;&lt;/i&gt;&#39;</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-          <span class="c1">// Add your code here
-</span><span class="c1"></span>          <span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;Hello world!&#39;</span><span class="p">);</span>
-        <span class="p">},</span> <span class="p">{</span>
-          <span class="nx">height</span><span class="o">:</span> <span class="mi">16</span><span class="p">,</span>
-          <span class="nx">width</span><span class="o">:</span> <span class="mi">16</span><span class="p">,</span>
-          <span class="s1">&#39;text-align&#39;</span><span class="o">:</span> <span class="s1">&#39;center&#39;</span>
-        <span class="p">},</span> <span class="kc">null</span><span class="p">,</span> <span class="kc">null</span><span class="p">,</span> <span class="kc">null</span><span class="p">,</span> <span class="kc">null</span><span class="p">,</span> <span class="kc">true</span><span class="p">).</span><span class="nx">add</span><span class="p">()</span>
+    <span class="c1">// ...
+</span><span class="c1"></span>    <span class="nx">legend</span><span class="o">:</span> <span class="p">{</span>
+      <span class="nx">useHTML</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+      <span class="nx">labelFormatter</span><span class="o">:</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+        <span class="kd">var</span> <span class="nx">tooltip</span><span class="p">;</span>
+        
+        <span class="k">switch</span> <span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">index</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">case</span> <span class="mi">0</span><span class="o">:</span>
+                <span class="nx">tooltip</span> <span class="o">=</span> <span class="s1">&#39;Includes Portuguese taxes&#39;</span><span class="p">;</span>
+                <span class="k">break</span><span class="p">;</span>
+            <span class="k">case</span> <span class="mi">1</span><span class="o">:</span>
+                <span class="nx">tooltip</span> <span class="o">=</span> <span class="s1">&#39;No taxes included&#39;</span><span class="p">;</span>
+                <span class="k">break</span><span class="p">;</span>
+        <span class="p">}</span>
+        
+        <span class="k">return</span> <span class="s1">&#39;&lt;span data-toggle=&#34;tooltip&#34; title=&#34;&#39;</span> <span class="o">+</span> <span class="nx">tooltip</span> <span class="o">+</span> <span class="s1">&#39;&#34;&gt;&#39;</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="nx">name</span> <span class="o">+</span> <span class="s1">&#39;&lt;/span&gt;&#39;</span><span class="p">;</span>
       <span class="p">}</span>
     <span class="p">}</span>
-  <span class="p">},</span>
-<span class="c1">//...
+    <span class="c1">//...
 </span><span class="c1"></span><span class="p">});</span>
 </code></pre></div><h1 id="references">References</h1>
 <ul>
-<li><a href="https://jsfiddle.net/petipalmares/8hzq4gaL/">Source code</a></li>
-<li><a href="https://api.highcharts.com/class-reference/Highcharts.SVGRenderer">Official documentation - SVGRenderer</a></li>
-<li><a href="https://www.highcharts.com/demo/renderer">Official demo - SVGRenderer</a></li>
+<li><a href="https://jsfiddle.net/petipalmares/zrdnv3fu/">Source Code</a></li>
+<li><a href="https://api.highcharts.com/highcharts/legend">Official documentation - Legend</a></li>
 </ul>
 
 </div>
 
         <footer class="post-footer clearfix">
     
-        <p class="post-tags">
-            <span>Tagged:</span>
-            
-            
-                <a href="/tags/highcharts-draggable-points/">Highcharts-draggable-points</a>
-            
-        </p>
-    
 
     <div class="share">
         
-            <a class="icon-twitter" href="https://twitter.com/share?text=Add%20a%20button%20to%20Highcharts&url=https%3a%2f%2fwww.programmerjourney.com%2fhighcharts-add-button%2f"
+            <a class="icon-twitter" href="https://twitter.com/share?text=Tooltip%20on%20a%20Highcharts%20Legend&url=https%3a%2f%2fwww.programmerjourney.com%2fhighcharts-legend-tooltip%2f"
                 onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
                 <i class="fa fa-twitter"></i>
                 <span class="hidden">Twitter</span>
@@ -172,7 +166,7 @@ if (!doNotTrack) {
         
 
         
-            <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.programmerjourney.com%2fhighcharts-add-button%2f"
+            <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.programmerjourney.com%2fhighcharts-legend-tooltip%2f"
                 onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
                 <i class="fa fa-facebook"></i>
                 <span class="hidden">Facebook</span>
@@ -180,7 +174,7 @@ if (!doNotTrack) {
         
 
         
-            <a class="icon-google-plus" href="https://plus.google.com/share?url=https%3a%2f%2fwww.programmerjourney.com%2fhighcharts-add-button%2f"
+            <a class="icon-google-plus" href="https://plus.google.com/share?url=https%3a%2f%2fwww.programmerjourney.com%2fhighcharts-legend-tooltip%2f"
               onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
               <i class="fa fa-google-plus"></i>
                 <span class="hidden">Google+</span>

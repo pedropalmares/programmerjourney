@@ -5,10 +5,19 @@
     <link>https://www.programmerjourney.com/categories/</link>
     <description>Recent content in Categories on Programmer Journey</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sat, 01 Aug 2020 07:23:33 +0100</lastBuildDate>
+    <lastBuildDate>Tue, 11 Aug 2020 10:41:41 +0100</lastBuildDate>
     
 	<atom:link href="https://www.programmerjourney.com/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Highcharts</title>
+      <link>https://www.programmerjourney.com/categories/highcharts/</link>
+      <pubDate>Tue, 11 Aug 2020 10:41:41 +0100</pubDate>
+      
+      <guid>https://www.programmerjourney.com/categories/highcharts/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>C#</title>
@@ -25,15 +34,6 @@
       <pubDate>Fri, 24 Jul 2020 17:00:28 +0100</pubDate>
       
       <guid>https://www.programmerjourney.com/categories/blazor/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Highcharts</title>
-      <link>https://www.programmerjourney.com/categories/highcharts/</link>
-      <pubDate>Wed, 01 Jul 2020 12:10:40 +0100</pubDate>
-      
-      <guid>https://www.programmerjourney.com/categories/highcharts/</guid>
       <description></description>
     </item>
     

@@ -5,10 +5,21 @@
     <link>https://www.programmerjourney.com/categories/highcharts/</link>
     <description>Recent content in Highcharts on Programmer Journey</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 01 Jul 2020 12:10:40 +0100</lastBuildDate>
+    <lastBuildDate>Tue, 11 Aug 2020 10:41:41 +0100</lastBuildDate>
     
 	<atom:link href="https://www.programmerjourney.com/categories/highcharts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Tooltip on a Highcharts Legend</title>
+      <link>https://www.programmerjourney.com/highcharts-legend-tooltip/</link>
+      <pubDate>Tue, 11 Aug 2020 10:41:41 +0100</pubDate>
+      
+      <guid>https://www.programmerjourney.com/highcharts-legend-tooltip/</guid>
+      <description>Looking for a way to add tooltips to the legends of your Highcharts charts? Let me show you how to do it.
+Requirement At my current project we use a lot of initials and abbreviations and we decided that a tooltip on a legend would be the most effective way to show a quick explanation to the user.
+Solution To create the tooltip we just need to change the chart&amp;rsquo;s options to enable the useHTML property to render the legend and add the tooltip logic to the labelFormatter property.</description>
+    </item>
     
     <item>
       <title>Add a button to Highcharts</title>

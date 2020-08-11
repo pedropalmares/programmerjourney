@@ -34,7 +34,7 @@ Highcharts.chart('container', {
     }
   },
 //...
-}
+});
 ``` 
 
 # References
