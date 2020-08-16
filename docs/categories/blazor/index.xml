@@ -5,10 +5,19 @@
     <link>https://www.programmerjourney.com/categories/blazor/</link>
     <description>Recent content in Blazor on Programmer Journey</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 24 Jul 2020 17:00:28 +0100</lastBuildDate>
+    <lastBuildDate>Sun, 16 Aug 2020 16:51:07 +0100</lastBuildDate>
     
 	<atom:link href="https://www.programmerjourney.com/categories/blazor/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Passing Cascading Values and Parameters in Blazor</title>
+      <link>https://www.programmerjourney.com/blazor-cascading-value/</link>
+      <pubDate>Sun, 16 Aug 2020 16:51:07 +0100</pubDate>
+      
+      <guid>https://www.programmerjourney.com/blazor-cascading-value/</guid>
+      <description>Blazor has several ways to pass values from a component to its child. However, when there are several layers between the components, the best way to pass data from an ancestor component to a descendant component is by using cascading values and parameters. In this post, I&amp;rsquo;ll show you how to pass a value from a component to its grandchild component. You can find the source code for this here.</description>
+    </item>
     
     <item>
       <title>Forcing parent component to refresh when using a State container in Blazor</title>

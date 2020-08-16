@@ -5,10 +5,19 @@
     <link>https://www.programmerjourney.com/tags/</link>
     <description>Recent content in Tags on Programmer Journey</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sat, 01 Aug 2020 07:23:33 +0100</lastBuildDate>
+    <lastBuildDate>Sun, 16 Aug 2020 16:51:07 +0100</lastBuildDate>
     
 	<atom:link href="https://www.programmerjourney.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Blazor</title>
+      <link>https://www.programmerjourney.com/tags/blazor/</link>
+      <pubDate>Sun, 16 Aug 2020 16:51:07 +0100</pubDate>
+      
+      <guid>https://www.programmerjourney.com/tags/blazor/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>C#</title>
@@ -16,15 +25,6 @@
       <pubDate>Sat, 01 Aug 2020 07:23:33 +0100</pubDate>
       
       <guid>https://www.programmerjourney.com/tags/c#/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Blazor</title>
-      <link>https://www.programmerjourney.com/tags/blazor/</link>
-      <pubDate>Fri, 24 Jul 2020 17:00:28 +0100</pubDate>
-      
-      <guid>https://www.programmerjourney.com/tags/blazor/</guid>
       <description></description>
     </item>
     

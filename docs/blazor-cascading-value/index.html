@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Passing Cascading Values and Parameters in Blazor</title>
+        <meta name="description" content="How to pass a value from a component to all its descending components">
+        <meta name="HandheldFriendly" content="True">
+        <meta name="MobileOptimized" content="320">
+        <meta name="generator" content="Hugo 0.71.0" />
+        <meta name="robots" content="index,follow">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta property="og:title" content="Passing Cascading Values and Parameters in Blazor">
+<meta property="og:description" content="How to pass a value from a component to all its descending components">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://www.programmerjourney.com/blazor-cascading-value/">
+        <link rel="stylesheet" href="https://www.programmerjourney.com/dist/site.css">
+        <link rel="stylesheet" href="https://www.programmerjourney.com/dist/syntax.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,600,700,300&subset=latin,cyrillic-ext,latin-ext,cyrillic">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+        
+        <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+        
+        
+    </head>
+    <body>
+        
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-168158575-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+
+        <div id="wrapper">
+            <header class="site-header">
+                <div class="container">
+                    <div class="site-title-wrapper">
+                        
+                            <h1 class="site-title">
+                                <a title="Programmer Journey" href="https://www.programmerjourney.com/">Programmer Journey</a>
+                            </h1>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                            <a class="button-square button-social hint--top" data-hint="Email" title="Email" href="mailto:pedro@programmerjourney.com">
+                                <i class="fa fa-envelope"></i>
+                            </a>
+                        
+                    </div>
+
+                    <ul class="site-nav">
+                        
+    <li class="site-nav-item">
+        <a title="Blazor" href="https://www.programmerjourney.com/categories/blazor/">Blazor</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a title="Blogging" href="https://www.programmerjourney.com/categories/blogging/">Blogging</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a title="C#" href="https://www.programmerjourney.com/categories/c#/">C#</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a title="Highcharts" href="https://www.programmerjourney.com/categories/highcharts/">Highcharts</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a title="Razor" href="https://www.programmerjourney.com/categories/razor/">Razor</a>
+    </li>
+
+| 
+
+    <li class="site-nav-item">
+        <a title="About" href="/page/about/">About</a>
+    </li>
+
+                    </ul>
+                </div>
+            </header>
+
+            <div id="container">
+
+
+<div class="container">
+    <article class="post-container" itemscope="" itemtype="http://schema.org/BlogPosting">
+        <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Passing Cascading Values and Parameters in Blazor</h1>
+    
+        <p class="post-description" itemprop="description">How to pass a value from a component to all its descending components</p>
+    
+    <p class="post-date post-line">
+        <span><time datetime="2020-08-16" itemprop="datePublished">Sun, Aug 16, 2020</time></span>
+        <span>by</span>
+        <span itemscope="" itemprop="author" itemtype="https://schema.org/Person">
+            <span itemprop="name">
+                <a href="#" itemprop="url" rel="author">Pedro</a>
+            </span>
+        </span>
+    </p>
+    
+</header>
+
+        <div class="post-content clearfix" itemprop="articleBody">
+    
+
+    <p>Blazor has several ways to pass values from a component to its child. However, when there are several layers between the components, the best way to pass data from an ancestor component to a descendant component is by using cascading values and parameters. In this post, I&rsquo;ll show you how to pass a value from a component to its grandchild component. You can find the source code for this <a href="https://github.com/pedropalmares/BlazorServerSamples/commit/384a5445410e1644d6fca8c807e4b8fc0e894f39">here</a>.</p>
+<p><img src="/img/blazor-cascading-value-1.png" alt="Example"></p>
+<h1 id="single-cascading-parameter">Single Cascading Parameter</h1>
+<p>The simplest way to use cascading values and parameters is by sending the value with a <code>CascadingValue</code> tag and getting the value from the child component with a <code>[CascadingParameter]</code>. Notice that this only works correctly when you are only passing one value to its descendants.</p>
+<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html">// Parent component
+
+<span class="p">&lt;</span><span class="nt">CascadingValue</span> <span class="na">Value</span><span class="o">=</span><span class="s">&#34;message&#34;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">ChildComponent</span><span class="p">&gt;&lt;/</span><span class="nt">ChildComponent</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">CascadingValue</span><span class="p">&gt;</span>
+
+@code {
+    string message = &#34;I&#39;m a value from the parent component.&#34;;
+}
+</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html">// ChildComponent
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>@Message<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+
+@code {
+    [CascadingParameter]
+    public string Message { get; set; }
+}
+</code></pre></div><h1 id="multiple-cascading-parameter">Multiple Cascading Parameter</h1>
+<p>When you need to pass multiple values you need to have a way to identify the parameters that are being passed. This can be done by differentiating them by type or by name.</p>
+<h2 id="identify-by-type">Identify by Type</h2>
+<p>If you are passing values with different types, such as int and string for example, the component will know how to match the value to the parameter automatically.</p>
+<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html">// Parent component
+
+<span class="p">&lt;</span><span class="nt">CascadingValue</span> <span class="na">Value</span><span class="o">=</span><span class="s">&#34;message&#34;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">CascadingValue</span> <span class="na">Value</span><span class="o">=</span><span class="s">&#34;age&#34;</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">ChildComponent</span><span class="p">&gt;&lt;/</span><span class="nt">ChildComponent</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">CascadingValue</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">CascadingValue</span><span class="p">&gt;</span>
+
+@code {
+    string message = &#34;I&#39;m a value from the parent component.&#34;;
+    int age = 10;
+}
+</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html">// ChildComponent
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>@StringFromParent - @IntFromParent<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+
+@code {
+    [CascadingParameter]
+    public string StringFromParent { get; set; }
+
+    [CascadingParameter]
+    public int IntFromParent { get; set; }
+}
+</code></pre></div><h2 id="identify-by-name">Identify by Name</h2>
+<p>When different values have the same type, you have to identify them by a name.</p>
+<p>This is, in my opinion, the best way to pass values from a component to its descendants!</p>
+<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html">// Parent component
+
+<span class="p">&lt;</span><span class="nt">CascadingValue</span> <span class="na">Value</span><span class="o">=</span><span class="s">&#34;message&#34;</span> <span class="na">Name</span><span class="o">=</span><span class="s">&#34;Message&#34;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">CascadingValue</span> <span class="na">Value</span><span class="o">=</span><span class="s">&#34;anotherMessage&#34;</span> <span class="na">Name</span><span class="o">=</span><span class="s">&#34;AnotherMessage&#34;</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">ChildComponent</span><span class="p">&gt;&lt;/</span><span class="nt">ChildComponent</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">CascadingValue</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">CascadingValue</span><span class="p">&gt;</span>
+
+@code {
+    string message = &#34;I&#39;m a value from the parent component.&#34;;
+    string anotherMessage = &#34;I&#39;m another value from the parent component.&#34;;
+}
+</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html">// ChildComponent
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>@StringFromParent<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>@AnotherStringFromParent<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+
+@code {
+    [CascadingParameter(Name = &#34;Message&#34;)]
+    public string StringFromParent { get; set; }
+
+    [CascadingParameter(Name = &#34;AnotherMessage&#34;)]
+    public string AnotherStringFromParent { get; set; }
+}
+</code></pre></div><p>I hope that you find this post helpful and that it can bring value to your projects. Let me know how it goes!</p>
+
+</div>
+
+        <footer class="post-footer clearfix">
+    
+        <p class="post-tags">
+            <span>Tagged:</span>
+            
+            
+                <a href="/tags/blazor/">Blazor</a>
+            
+        </p>
+    
+
+    <div class="share">
+        
+            <a class="icon-twitter" href="https://twitter.com/share?text=Passing%20Cascading%20Values%20and%20Parameters%20in%20Blazor&url=https%3a%2f%2fwww.programmerjourney.com%2fblazor-cascading-value%2f"
+                onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                <i class="fa fa-twitter"></i>
+                <span class="hidden">Twitter</span>
+            </a>
+        
+
+        
+            <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.programmerjourney.com%2fblazor-cascading-value%2f"
+                onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                <i class="fa fa-facebook"></i>
+                <span class="hidden">Facebook</span>
+            </a>
+        
+
+        
+            <a class="icon-google-plus" href="https://plus.google.com/share?url=https%3a%2f%2fwww.programmerjourney.com%2fblazor-cascading-value%2f"
+              onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+              <i class="fa fa-google-plus"></i>
+                <span class="hidden">Google+</span>
+            </a>
+        
+        
+    </div>
+</footer>
+
+        
+    <div class="comments">
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "programmerjourney" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </div>
+
+    </article>
+</div>
+
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="site-title-wrapper">
+                    <p class="footer-copyright">
+                        <span>&copy; 2020 Programmer Journey</span>
+                    </p>
+                </div>
+            </div>
+        </footer>
+
+        <script src="https://www.programmerjourney.com/js/jquery-1.11.3.min.js"></script>
+        <script src="https://www.programmerjourney.com/js/jquery.fitvids.js"></script>
+        <script src="https://www.programmerjourney.com/js/scripts.js"></script>
+    </body>
+</html>
+
