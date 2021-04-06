@@ -103,7 +103,7 @@ table tr { border-bottom: 1px dotted #aeadad; }
 .post-content .footnote { border-spacing: 0; margin-bottom: 0; }
 .post-content .footnote .label+td { width: 100%; }
 .post-content .gist tr { border-bottom: 0; }
-.post-footer { margin-top: 5px; }
+.post-footer { margin-top: 5px; display: flex; justify-content: space-between; align-items: center; }
 .post-tags, .share { color: #aeadad; font-size: 14px; }
 .post-tags span, .share span { font-weight: 600; }
 .post-tags { float: left; margin: 3px 0 0; }
@@ -198,3 +198,4 @@ table tr { border-bottom: 1px dotted #aeadad; }
 ul+h1, ol+h1 { margin-top: 30px; }
 p+ul, p+ol { margin-top: -20px; }
 .highlight { margin-top: -20px; }
+.bmc-btn { font-size: 18px !important; min-width: auto !important; height: 40px !important; }

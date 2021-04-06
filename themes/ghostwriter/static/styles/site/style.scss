@@ -337,7 +337,7 @@ table {
     }
 }
 
-.post-footer { margin-top: 5px; }
+.post-footer { margin-top: 5px; display: flex; justify-content: space-between; align-items: center; }
 
 .post-tags,
 .share {
@@ -770,4 +770,10 @@ p + ul, p + ol {
 }
 .highlight {
     margin-top: -20px;
+}
+
+.bmc-btn {
+    font-size: 18px !important;
+    min-width: auto !important;
+    height: 40px !important;
 }
